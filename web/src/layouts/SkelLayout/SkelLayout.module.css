@@ -1,0 +1,43 @@
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+.font {
+  font-family: 'EB Garamond', serif;
+}
+
+.body {
+  max-width: 980px;
+  font-family: 'EB Garamond', serif;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  color: white;
+  font-family: EB Garamond;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+
+  animation:
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+    /* era 10s; */
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white }
+}
+/* @keyframes era {
+  from { font-size: 40px }
+  to { font-size: 20px }
+} */
+
