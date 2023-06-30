@@ -1,18 +1,18 @@
 
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 .font {
-  font-family: 'EB Garamond', serif;
+  font-family: 'Ubuntu Mono', serif;
 }
 
 .body {
   max-width: 980px;
-  font-family: 'EB Garamond', serif;
+  font-family: 'Ubuntu Mono', serif;
 }
 
 /* DEMO-SPECIFIC STYLES */
 .typewriter h1 {
-  color: white;
-  font-family: EB Garamond;
+
+  font-family: Ubuntu Mono;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid orange; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */

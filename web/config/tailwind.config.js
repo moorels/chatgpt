@@ -5,8 +5,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        libre: ['EB Garamond'],
+        libre: ['Ubuntu Mono'],
       },
+    },
+    backgroundImage: {
+      back: "url('../../public/back.jpg')",
     },
   },
   plugins: [],

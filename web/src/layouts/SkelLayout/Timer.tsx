@@ -13,7 +13,7 @@ export default function Timer() {
 
   return (
     <div>
-      <div className="focus:shadow-outline m-3 w-60 justify-center rounded-lg bg-blue-500 p-2 text-center text-indigo-100 transition-colors duration-150 hover:bg-blue-700">
+      <div className=" focus:shadow-outline hover: w-70 m-3 justify-center rounded-lg bg-gray-500  p-2 text-center font-mono text-sm text-indigo-100 transition-colors  duration-150 hover:animate-pulse hover:bg-zinc-600">
         {`${date.toDateString()} ${tt} `}
       </div>
     </div>

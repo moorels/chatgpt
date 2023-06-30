@@ -33,8 +33,8 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
   console.log('test')
   return (
     <>
-      <div className="body-font  bg-slate-800  text-gray-600">
-        <header className="body-font bg-slate-800  text-gray-600">
+      <div className="body-font  bg-slate-600  text-gray-600">
+        <header className="body-font bg-slate-600  text-gray-600">
           <div className="  flex flex-col flex-wrap items-center p-5 md:flex-row ">
             <div className="title-font mb-4 flex items-center font-medium text-gray-900 md:mb-0 ">
               <svg
@@ -44,14 +44,14 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
-                className="h-10 w-10 bg-blue-500 p-2 text-white"
+                className="h-10 w-10 bg-gray-500 p-2 text-white"
                 viewBox="0 0 32 32"
               >
                 <path d="M32 19l-6-6v-9h-4v5l-6-6-16 16v1h4v10h10v-6h4v6h10v-10h4z"></path>
               </svg>
               <Link to={routes.homepage()}>
-                <span className="ml-3 font-libre text-xl text-white">
-                  Chat Gpt
+                <span className="ml-3 animate-pulse text-xl text-slate-200">
+                  Sync AI
                 </span>
               </Link>
             </div>
@@ -60,7 +60,7 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
               <ul>
                 <li>
                   <div className="space-x-1 ">
-                    <span className=" focus:shadow-outline h-9 rounded-lg bg-blue-500 p-2 text-indigo-100 transition-colors duration-150 hover:bg-blue-700">
+                    <span className="focus:shadow-outline h-9 rounded-lg bg-gray-500 p-2 font-libre text-indigo-100 transition-colors duration-150 hover:bg-zinc-600">
                       {isAuthenticated ? (
                         <button onClick={() => logmeout.logOut()}>
                           <span className=" relative inline-flex h-2 w-2 rounded-full bg-gray-100">
@@ -70,36 +70,33 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
                           <span className="w-4 p-2"> Logout</span>
                         </button>
                       ) : (
-                        <Link
-                          className="focus:shadow-outline rounded-lg bg-blue-500 p-2 text-indigo-100 transition-colors duration-150 hover:bg-blue-700"
-                          to={routes.login()}
-                        >
-                          <span className=" relative inline-flex h-2 w-2 rounded-full bg-gray-100">
-                            <span className=" absolute inline-flex h-full w-full animate-ping rounded-full bg-gray-100 opacity-75"></span>
+                        <Link className="" to={routes.login()}>
+                          <span className=" relative inline-flex h-2 w-2 rounded-full bg-gray-100 ">
+                            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gray-100  opacity-75"></span>
                           </span>
                           {(user = '')}
                           {(welcome = '')}
-                          <span className="w-4 p-1"> Login</span>
+                          <span className="w-4 p-1 font-mono"> Login</span>
                         </Link>
                       )}
                     </span>
 
                     <Link
-                      className="focus:shadow-outline rounded-lg bg-blue-500 p-2 text-indigo-100 transition-colors duration-150 hover:bg-blue-700"
+                      className="  focus:shadow-outline rounded-lg bg-gray-500 p-2 font-libre text-indigo-100 transition-colors duration-150 hover:bg-zinc-600"
                       to={routes.modules()}
                     >
                       <span className=" relative inline-flex h-2 w-2 rounded-full bg-gray-100">
                         <span className=" absolute inline-flex h-full w-full animate-ping rounded-full bg-gray-100 opacity-75"></span>
                       </span>
-                      <span> ChatGPT</span>
+                      <span> Explore</span>
                     </Link>
                     {isadmin ? (
                       <Link
-                        className="focus:shadow-outline rounded-lg bg-blue-500 p-2 text-indigo-100 transition-colors duration-150 hover:bg-blue-700"
+                        className="focus:shadow-outline rounded-lg bg-gray-500 p-2 text-indigo-100 transition-colors duration-150 hover:bg-zinc-900"
                         to={routes.users()}
                       >
                         <span className=" relative inline-flex h-2 w-2 rounded-full bg-gray-100">
-                          <span className=" absolute inline-flex h-full w-full animate-ping rounded-full bg-gray-100 opacity-75"></span>
+                          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gray-100 font-libre opacity-75"></span>
                         </span>
                         <span> Users</span>
                       </Link>
@@ -111,13 +108,13 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
               </ul>
               <Timer />
             </nav>
-            <div className="bg-white-500   place-content-center p-2 text-white"></div>
+            <div className=" bg-white-500   place-content-center p-2 text-white"></div>
 
             <div className={styles.typewriter}>
-              <h1>Welcome to Chat Gpt</h1>
+              <h1 className=" text-sm text-zinc-100 ">Welcome to Sync AI</h1>
             </div>
           </div>
-          <div className=" focus:shadow-outline m-3 w-60 justify-center rounded-lg p-2 text-center align-middle font-libre text-2xl text-slate-100"></div>
+          <div className=" focus:shadow-outline m-3 w-60 justify-center rounded-lg p-2 text-center align-middle text-2xl text-slate-100"></div>
         </header>
       </div>
       <div></div>
