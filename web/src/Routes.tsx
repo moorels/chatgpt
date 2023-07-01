@@ -25,7 +25,6 @@ const Routes = () => {
       <UserContext.Provider value={{ user, setUser, cust, setCust }}>
         <Set wrap={SkelLayout}>
           <Private unauthenticated="login">
-            <Route path="/modules" page={ModulesPage} name="modules" />
             <Set wrap={ScaffoldLayout} title="Users" titleTo="users">
               <Route path="/users/new" page={UserNewUserPage} name="newUser" />
               <Route path="/users/{id:Int}/edit" page={UserEditUserPage} name="editUser" />
@@ -33,6 +32,7 @@ const Routes = () => {
               <Route path="/users" page={UserUsersPage} name="users" />
             </Set>
           </Private>
+          <Route path="/explore" page={ModulesPage} name="explore" />
           <Route path="/" page={HomepagePage} name="homepage" />
           <Route notfound page={NotFoundPage} />
           <Route path="/login" page={LoginPage} name="login" />

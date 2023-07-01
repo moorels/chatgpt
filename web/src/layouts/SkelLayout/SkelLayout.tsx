@@ -83,7 +83,7 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
 
                     <Link
                       className="  focus:shadow-outline rounded-lg bg-gray-500 p-2 font-libre text-indigo-100 transition-colors duration-150 hover:bg-zinc-600"
-                      to={routes.modules()}
+                      to={routes.explore()}
                     >
                       <span className=" relative inline-flex h-2 w-2 rounded-full bg-gray-100">
                         <span className=" absolute inline-flex h-full w-full animate-ping rounded-full bg-gray-100 opacity-75"></span>

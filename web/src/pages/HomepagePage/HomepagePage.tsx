@@ -15,7 +15,13 @@ const HomepagePage = () => {
               <h1 className="title-font mb-2 bg-slate-700 py-8 text-2xl font-medium text-white sm:text-3xl">
                 Integrating artificial intelligence into your business model
               </h1>
-
+              <p className="w-full leading-relaxed text-white lg:w-1/2">
+                When potential clients ask our expert staff what they can
+                achieve with intelligent automation, the simple answer is - the
+                opportunities are endless. With so many options on the table,
+                it’s often a case of needing to identify how many, not which one
+                of our ai intelligent solutions they want to embrace.
+              </p>
               <h1 className="title-font mb-2 bg-slate-700 py-4 text-2xl font-medium text-white sm:text-3xl">
                 Revolutionize the customer experience with AI
               </h1>
