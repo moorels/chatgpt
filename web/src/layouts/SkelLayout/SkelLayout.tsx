@@ -35,8 +35,8 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
     <>
       <div className="body-font  bg-slate-600  text-gray-600">
         <header className="body-font bg-slate-600  text-gray-600">
-          <div className="  flex flex-col flex-wrap items-center p-5 md:flex-row ">
-            <div className="title-font mb-4 flex items-center font-medium text-gray-900 md:mb-0 ">
+          <div className="  flex flex-col flex-wrap items-center p-3 md:flex-row ">
+            <div className="title-font mb-0 flex items-center font-medium text-gray-900 md:mb-0 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -83,7 +83,7 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
 
                     <Link
                       className="  focus:shadow-outline rounded-lg bg-gray-500 p-2 font-libre text-indigo-100 transition-colors duration-150 hover:bg-zinc-600"
-                      to={routes.explore()}
+                      to={routes.computer()}
                     >
                       <span className=" relative inline-flex h-2 w-2 rounded-full bg-gray-100">
                         <span className=" absolute inline-flex h-full w-full animate-ping rounded-full bg-gray-100 opacity-75"></span>
@@ -114,7 +114,7 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
               <h1 className=" text-sm text-zinc-100 ">Welcome to Sync AI</h1>
             </div>
           </div>
-          <div className=" focus:shadow-outline m-3 w-60 justify-center rounded-lg p-2 text-center align-middle text-2xl text-slate-100"></div>
+          <div className=" focus:shadow-outline m-2 w-60 justify-center rounded-lg p-0 text-center align-middle text-2xl text-slate-100"></div>
         </header>
       </div>
       <div></div>
