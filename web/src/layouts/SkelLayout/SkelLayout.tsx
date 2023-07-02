@@ -36,19 +36,21 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
       <div className="body-font  bg-slate-600  text-gray-600">
         <header className="body-font bg-slate-600  text-gray-600">
           <div className="  flex flex-col flex-wrap items-center p-3 md:flex-row ">
-            <div className="title-font mb-0 flex items-center font-medium text-gray-900 md:mb-0 ">
+            <div className="title-font mb-0 flex items-center px-2 py-2 font-medium text-gray-900 md:mb-0">
               <Link to={routes.homepage()}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="h-10 w-10 bg-gray-500 p-2 text-white"
-                  viewBox="0 0 32 32"
-                >
-                  <path d="M32 19l-6-6v-9h-4v5l-6-6-16 16v1h4v10h10v-6h4v6h10v-10h4z"></path>
+                <svg fill="none" viewBox="0 0 24 24" height="2em" width="2em">
+                  <path
+                    fill="currentColor"
+                    fillRule="evenodd"
+                    d="M9 22a1 1 0 11-2 0 1 1 0 012 0zm4 0a1 1 0 11-2 0 1 1 0 012 0zm3 1a1 1 0 100-2 1 1 0 000 2z"
+                    clipRule="evenodd"
+                  />
+                  <path
+                    fill="currentColor"
+                    fillRule="evenodd"
+                    d="M9 2a1 1 0 11-2 0 1 1 0 012 0zm4 0a1 1 0 11-2 0 1 1 0 012 0zm3 1a1 1 0 100-2 1 1 0 000 2zM9 22a1 1 0 11-2 0 1 1 0 012 0zm4 0a1 1 0 11-2 0 1 1 0 012 0zm3 1a1 1 0 100-2 1 1 0 000 2zm7-7a1 1 0 10-2 0 1 1 0 002 0zm0-4a1 1 0 10-2 0 1 1 0 002 0zm-1-5a1 1 0 110 2 1 1 0 010-2zM2 15a1 1 0 110 2 1 1 0 010-2zm0-4a1 1 0 110 2 1 1 0 010-2zm1-3a1 1 0 10-2 0 1 1 0 002 0zm14-2H7a1 1 0 00-1 1v10a1 1 0 001 1h10a1 1 0 001-1V7a1 1 0 00-1-1zM7 4a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm7 6h-4v4h4v-4zM8 8v8h8V8H8z"
+                    clipRule="evenodd"
+                  />
                 </svg>
               </Link>
               <Link to={routes.homepage()}>
