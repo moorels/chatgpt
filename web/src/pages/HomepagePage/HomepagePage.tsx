@@ -69,9 +69,9 @@ const HomepagePage = () => {
                   to help businesses implement AI systems. Our experienced team
                   of AI professionals is well-versed in the latest AI
                   technologies and can provide comprehensive advice on how to
-                  increase efficiency and productivity with the use of AI. We
-                  provide tailored solutions to meet the individual needs of
-                  each company to help them realize the full potential of AI.
+                  increase efficiency and productivity with AI. We provide
+                  tailored solutions to meet the individual needs of each
+                  company to help them realize the potential of AI.
                 </p>
               </div>
             </div>
@@ -130,8 +130,8 @@ const HomepagePage = () => {
                   to give a personalised Chat-GPT style bot that can be used for
                   both internal and external applications. This enables teams to
                   interact with customers and employees in an efficient and
-                  natural manner, allowing for an improved customer experience
-                  and increased employee productivity.
+                  natural manner, improving customer experience and increased
+                  employee productivity.
                 </p>
               </div>
             </div>
