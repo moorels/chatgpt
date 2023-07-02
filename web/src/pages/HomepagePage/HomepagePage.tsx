@@ -64,7 +64,7 @@ const HomepagePage = () => {
                 <h2 className="title-font mb-2 text-lg font-medium text-white">
                   AI Consulting
                 </h2>
-                <p className="h-60 text-base leading-relaxed">
+                <p className="h-72 text-base leading-relaxed">
                   Our AI Automation Agency specializes in AI consulting services
                   to help businesses implement AI systems. Our experienced team
                   of AI professionals is well-versed in the latest AI
@@ -95,7 +95,7 @@ const HomepagePage = () => {
                 <h2 className="title-font mb-2 text-lg font-medium text-white">
                   AI Automated Workflows
                 </h2>
-                <p className=" h-60 text-base leading-relaxed">
+                <p className=" h-72 text-base leading-relaxed">
                   We offer AI Automated Workflows to streamline and automate
                   your most complex tasks. Our AI Automated Workflows are
                   designed to help you save time and resources, while allowing
@@ -124,7 +124,7 @@ const HomepagePage = () => {
                 <h2 className="title-font mb-2 text-lg font-medium text-white">
                   Internal & External Chatbots
                 </h2>
-                <p className="h-60 text-base  leading-relaxed">
+                <p className="h-72 text-base  leading-relaxed">
                   We provide comprehensive services for external and internal
                   chatbots. Our AI powered chatbots are trained on private data
                   to give a personalised Chat-GPT style bot that can be used for

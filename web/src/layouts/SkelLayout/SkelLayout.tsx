@@ -37,18 +37,20 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
         <header className="body-font bg-slate-600  text-gray-600">
           <div className="  flex flex-col flex-wrap items-center p-3 md:flex-row ">
             <div className="title-font mb-0 flex items-center font-medium text-gray-900 md:mb-0 ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="h-10 w-10 bg-gray-500 p-2 text-white"
-                viewBox="0 0 32 32"
-              >
-                <path d="M32 19l-6-6v-9h-4v5l-6-6-16 16v1h4v10h10v-6h4v6h10v-10h4z"></path>
-              </svg>
+              <Link to={routes.homepage()}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  className="h-10 w-10 bg-gray-500 p-2 text-white"
+                  viewBox="0 0 32 32"
+                >
+                  <path d="M32 19l-6-6v-9h-4v5l-6-6-16 16v1h4v10h10v-6h4v6h10v-10h4z"></path>
+                </svg>
+              </Link>
               <Link to={routes.homepage()}>
                 <span className="ml-3 animate-pulse text-xl text-slate-200">
                   Sync AI
@@ -83,7 +85,7 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
 
                     <Link
                       className="  focus:shadow-outline rounded-lg bg-gray-500 p-2 font-libre text-indigo-100 transition-colors duration-150 hover:bg-zinc-600"
-                      to={routes.computer()}
+                      to={routes.explore()}
                     >
                       <span className=" relative inline-flex h-2 w-2 rounded-full bg-gray-100">
                         <span className=" absolute inline-flex h-full w-full animate-ping rounded-full bg-gray-100 opacity-75"></span>
