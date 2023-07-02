@@ -36,7 +36,7 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
       <div className="body-font  bg-slate-600  text-gray-600">
         <header className="body-font bg-slate-600  text-gray-600">
           <div className="  flex flex-col flex-wrap items-center p-3 md:flex-row ">
-            <div className="title-font mb-0 flex items-center font-medium text-gray-900 md:mb-0 ">
+            <div className="title-font mb-2 flex items-center font-medium text-gray-900 md:mb-0 ">
               <Link to={routes.homepage()}>
                 <svg fill="none" viewBox="0 0 24 24" height="2em" width="2em">
                   <path

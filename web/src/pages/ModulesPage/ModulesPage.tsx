@@ -12,7 +12,7 @@ const ModulesPage = () => {
                 <li>
                   <div className="space-x-1 ">
                     <Link
-                      className="  focus:shadow-outline  bg-gray-500 p-2 font-libre text-indigo-100 transition-colors duration-150 hover:bg-zinc-600"
+                      className="  focus:shadow-outline  mb-6 bg-gray-500 p-2 font-libre text-indigo-100 transition-colors duration-150 hover:bg-zinc-600"
                       to={routes.computer()}
                     >
                       <span className=" relative inline-flex h-2 w-2  bg-green-500">
@@ -21,7 +21,7 @@ const ModulesPage = () => {
                       <span> Computer Store</span>
                     </Link>
                     <Link
-                      className="  focus:shadow-outline  bg-gray-500 p-2 font-libre text-indigo-100 transition-colors duration-150 hover:bg-zinc-600"
+                      className="  focus:shadow-outline mb-6 bg-gray-500 p-2 font-libre text-indigo-100 transition-colors duration-150 hover:bg-zinc-600"
                       to={routes.store2()}
                     >
                       <span className=" relative inline-flex h-2 w-2  bg-green-500">
@@ -30,7 +30,7 @@ const ModulesPage = () => {
                       <span> Dog Grooming</span>
                     </Link>
                     <Link
-                      className="  focus:shadow-outline  bg-gray-500 p-2 font-libre text-indigo-100 transition-colors duration-150 hover:bg-zinc-600"
+                      className="  focus:shadow-outline mb-6 bg-gray-500 p-2 font-libre text-indigo-100 transition-colors duration-150 hover:bg-zinc-600"
                       to={routes.store3()}
                     >
                       <span className=" relative inline-flex h-2 w-2  bg-green-500">
