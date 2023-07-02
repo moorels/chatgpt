@@ -31,6 +31,7 @@ const Routes = () => {
               <Route path="/users/{id:Int}" page={UserUserPage} name="user" />
               <Route path="/users" page={UserUsersPage} name="users" />
             </Set>
+            <Route path="/members" page={MembersPage} name="members" />
           </Private>
           <Route path="/explore" page={ExplorePage} name="explore" />
           <Route path="/computer" page={ModulesPage} name="computer" />

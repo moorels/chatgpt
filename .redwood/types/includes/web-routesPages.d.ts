@@ -4,6 +4,7 @@ import FatalErrorPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC A
 import ForgotPasswordPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI/web/src/pages/ForgotPasswordPage/ForgotPasswordPage'
 import HomepagePageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI/web/src/pages/HomepagePage/HomepagePage'
 import LoginPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI/web/src/pages/LoginPage/LoginPage'
+import MembersPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI/web/src/pages/MembersPage/MembersPage'
 import ModulesPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI/web/src/pages/ModulesPage/ModulesPage'
 import NotFoundPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI/web/src/pages/NotFoundPage/NotFoundPage'
 import ResetPasswordPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI/web/src/pages/ResetPasswordPage/ResetPasswordPage'
@@ -25,6 +26,7 @@ declare global {
   const ForgotPasswordPage: typeof ForgotPasswordPageType
   const HomepagePage: typeof HomepagePageType
   const LoginPage: typeof LoginPageType
+  const MembersPage: typeof MembersPageType
   const ModulesPage: typeof ModulesPageType
   const NotFoundPage: typeof NotFoundPageType
   const ResetPasswordPage: typeof ResetPasswordPageType

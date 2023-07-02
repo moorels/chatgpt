@@ -24,7 +24,7 @@ const LoginPage = () => {
   useEffect(() => {
     if (isAuthenticated) {
       setUser(usernameRef.current.value)
-      navigate(routes.modules())
+      navigate(routes.members())
     }
   }, [isAuthenticated])
 
