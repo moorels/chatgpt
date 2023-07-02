@@ -1,7 +1,6 @@
 import { Link, routes } from '@redwoodjs/router'
 
-/* eslint-disable jsx-a11y/iframe-has-title */
-const ModulesPage = () => {
+const Store2Page = () => {
   return (
     <>
       <div className="flex-col bg-slate-700  py-2">
@@ -16,16 +15,16 @@ const ModulesPage = () => {
                       to={routes.computer()}
                     >
                       <span className=" relative inline-flex h-2 w-2  bg-green-500">
-                        <span className=" absolute inline-flex h-full w-full  bg-gray-100 opacity-75"></span>
+                        <span className=" absolute inline-flex h-full w-full   bg-gray-100 opacity-75"></span>
                       </span>
                       <span> Computer Store</span>
                     </Link>
                     <Link
-                      className="  focus:shadow-outline  bg-gray-500 p-2 font-libre text-indigo-100 transition-colors duration-150 hover:bg-zinc-600"
+                      className="  focus:shadow-outline bg-gray-500 p-2 font-libre text-indigo-100 transition-colors duration-150 hover:bg-zinc-600"
                       to={routes.store2()}
                     >
                       <span className=" relative inline-flex h-2 w-2  bg-green-500">
-                        <span className=" absolute inline-flex h-full w-full   bg-gray-100 opacity-75"></span>
+                        <span className=" absolute inline-flex h-full w-full  bg-gray-100 opacity-75"></span>
                       </span>
                       <span> Dog Grooming</span>
                     </Link>
@@ -47,7 +46,8 @@ const ModulesPage = () => {
             <div className="flex-col bg-slate-700  py-1">
               <iframe
                 className=" m-0 -mt-[5px] bg-slate-700 p-0"
-                src="https://chatstore1.vercel.app"
+                title="df"
+                src="https://chatstore2.vercel.app/"
                 height="650"
                 width="620"
               ></iframe>
@@ -59,4 +59,4 @@ const ModulesPage = () => {
   )
 }
 
-export default ModulesPage
+export default Store2Page
