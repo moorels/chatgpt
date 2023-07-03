@@ -1,3 +1,5 @@
+import type { EditContactById, UpdateContactInput } from 'types/graphql'
+
 import {
   Form,
   FormError,
@@ -6,8 +8,6 @@ import {
   TextField,
   Submit,
 } from '@redwoodjs/forms'
-
-import type { EditContactById, UpdateContactInput } from 'types/graphql'
 import type { RWGqlError } from '@redwoodjs/forms'
 
 type FormContact = NonNullable<EditContactById['contact']>
@@ -25,18 +25,18 @@ const ContactForm = (props: ContactFormProps) => {
   }
 
   return (
-    <div className="rw-form-wrapper">
+    <div className="rw-form-wrapper ">
       <Form<FormContact> onSubmit={onSubmit} error={props.error}>
         <FormError
           error={props.error}
-          wrapperClassName="rw-form-error-wrapper"
-          titleClassName="rw-form-error-title"
-          listClassName="rw-form-error-list"
+          wrapperClassName="rw-form-error-wrapper "
+          titleClassName="rw-form-error-title "
+          listClassName="rw-form-error-list "
         />
 
         <Label
-          name="name"
-          className="rw-label"
+          name="name "
+          className="rw-label text-white"
           errorClassName="rw-label rw-label-error"
         >
           Name
@@ -45,7 +45,7 @@ const ContactForm = (props: ContactFormProps) => {
         <TextField
           name="name"
           defaultValue={props.contact?.name}
-          className="rw-input"
+          className="rw-input text-black"
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
         />
@@ -53,8 +53,26 @@ const ContactForm = (props: ContactFormProps) => {
         <FieldError name="name" className="rw-field-error" />
 
         <Label
+          name="company"
+          className="rw-label text-white"
+          errorClassName="rw-label rw-label-error"
+        >
+          Company
+        </Label>
+
+        <TextField
+          name="company"
+          defaultValue={props.contact?.company}
+          className="rw-input text-black"
+          errorClassName="rw-input rw-input-error"
+          validation={{ required: false }}
+        />
+
+        <FieldError name="company" className="rw-field-error " />
+
+        <Label
           name="email"
-          className="rw-label"
+          className="rw-label text-white"
           errorClassName="rw-label rw-label-error"
         >
           Email
@@ -63,16 +81,52 @@ const ContactForm = (props: ContactFormProps) => {
         <TextField
           name="email"
           defaultValue={props.contact?.email}
-          className="rw-input"
+          className="rw-input text-black"
           errorClassName="rw-input rw-input-error"
-          validation={{ required: true }}
+          validation={{ required: false }}
         />
 
         <FieldError name="email" className="rw-field-error" />
 
         <Label
+          name="phone"
+          className="rw-label text-white"
+          errorClassName="rw-label rw-label-error"
+        >
+          Phone
+        </Label>
+
+        <TextField
+          name="phone"
+          defaultValue={props.contact?.phone}
+          className="rw-input text-black"
+          errorClassName="rw-input rw-input-error"
+          validation={{ required: false }}
+        />
+
+        <FieldError name="phone" className="rw-field-error" />
+
+        <Label
+          name="product"
+          className="rw-label text-white"
+          errorClassName="rw-label rw-label-error"
+        >
+          Product
+        </Label>
+
+        <TextField
+          name="product"
+          defaultValue={props.contact?.product}
+          className="rw-input text-black"
+          errorClassName="rw-input rw-input-error"
+          validation={{ required: false }}
+        />
+
+        <FieldError name="product" className="rw-field-error" />
+
+        <Label
           name="message"
-          className="rw-label"
+          className="rw-label text-white"
           errorClassName="rw-label rw-label-error"
         >
           Message
@@ -81,16 +135,19 @@ const ContactForm = (props: ContactFormProps) => {
         <TextField
           name="message"
           defaultValue={props.contact?.message}
-          className="rw-input"
+          className="rw-input text-black"
           errorClassName="rw-input rw-input-error"
-          validation={{ required: true }}
+          validation={{ required: false }}
         />
 
         <FieldError name="message" className="rw-field-error" />
 
-        <div className="rw-button-group">
-          <Submit disabled={props.loading} className="rw-button rw-button-blue">
-            Save
+        <div className="rw-button-group ">
+          <Submit
+            disabled={props.loading}
+            className="rw-button  bg-slate-500 text-white"
+          >
+            Send
           </Submit>
         </div>
       </Form>

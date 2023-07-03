@@ -10,7 +10,10 @@ export const QUERY = gql`
     contacts {
       id
       name
+      company
       email
+      phone
+      product
       message
       createdAt
     }

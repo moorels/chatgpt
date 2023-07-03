@@ -10,17 +10,23 @@ directive @skipAuth on FIELD_DEFINITION
 scalar BigInt
 
 type Contact {
+  company: String!
   createdAt: DateTime!
   email: String!
   id: Int!
   message: String!
   name: String!
+  phone: String!
+  product: String!
 }
 
 input CreateContactInput {
+  company: String!
   email: String!
   message: String!
   name: String!
+  phone: String!
+  product: String!
 }
 
 input CreateUserInput {
@@ -81,9 +87,12 @@ type Redwood {
 scalar Time
 
 input UpdateContactInput {
+  company: String
   email: String
   message: String
   name: String
+  phone: String
+  product: String
 }
 
 input UpdateUserInput {

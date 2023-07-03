@@ -11,7 +11,7 @@ import './index.css'
 
 const App = () => (
   <FatalErrorBoundary page={FatalErrorPage}>
-    <RedwoodProvider titleTemplate="Chat Gpt">
+    <RedwoodProvider titleTemplate="Sync AI">
       <AuthProvider>
         <RedwoodApolloProvider useAuth={useAuth}>
           <Routes />

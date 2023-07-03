@@ -1,3 +1,0 @@
--- AlterTable
-ALTER TABLE "User" ALTER COLUMN "completed" DROP NOT NULL,
-ALTER COLUMN "notes" DROP NOT NULL;

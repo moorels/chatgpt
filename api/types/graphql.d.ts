@@ -39,17 +39,23 @@ export type Scalars = {
 
 export type Contact = {
   __typename?: 'Contact';
+  company: Scalars['String'];
   createdAt: Scalars['DateTime'];
   email: Scalars['String'];
   id: Scalars['Int'];
   message: Scalars['String'];
   name: Scalars['String'];
+  phone: Scalars['String'];
+  product: Scalars['String'];
 };
 
 export type CreateContactInput = {
+  company: Scalars['String'];
   email: Scalars['String'];
   message: Scalars['String'];
   name: Scalars['String'];
+  phone: Scalars['String'];
+  product: Scalars['String'];
 };
 
 export type CreateUserInput = {
@@ -144,9 +150,12 @@ export type Redwood = {
 };
 
 export type UpdateContactInput = {
+  company?: InputMaybe<Scalars['String']>;
   email?: InputMaybe<Scalars['String']>;
   message?: InputMaybe<Scalars['String']>;
   name?: InputMaybe<Scalars['String']>;
+  phone?: InputMaybe<Scalars['String']>;
+  product?: InputMaybe<Scalars['String']>;
 };
 
 export type UpdateUserInput = {
@@ -292,20 +301,26 @@ export interface BigIntScalarConfig extends GraphQLScalarTypeConfig<ResolversTyp
 }
 
 export type ContactResolvers<ContextType = RedwoodGraphQLContext, ParentType extends ResolversParentTypes['Contact'] = ResolversParentTypes['Contact']> = {
+  company: OptArgsResolverFn<ResolversTypes['String'], ParentType, ContextType>;
   createdAt: OptArgsResolverFn<ResolversTypes['DateTime'], ParentType, ContextType>;
   email: OptArgsResolverFn<ResolversTypes['String'], ParentType, ContextType>;
   id: OptArgsResolverFn<ResolversTypes['Int'], ParentType, ContextType>;
   message: OptArgsResolverFn<ResolversTypes['String'], ParentType, ContextType>;
   name: OptArgsResolverFn<ResolversTypes['String'], ParentType, ContextType>;
+  phone: OptArgsResolverFn<ResolversTypes['String'], ParentType, ContextType>;
+  product: OptArgsResolverFn<ResolversTypes['String'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
 export type ContactRelationResolvers<ContextType = RedwoodGraphQLContext, ParentType extends ResolversParentTypes['Contact'] = ResolversParentTypes['Contact']> = {
+  company?: RequiredResolverFn<ResolversTypes['String'], ParentType, ContextType>;
   createdAt?: RequiredResolverFn<ResolversTypes['DateTime'], ParentType, ContextType>;
   email?: RequiredResolverFn<ResolversTypes['String'], ParentType, ContextType>;
   id?: RequiredResolverFn<ResolversTypes['Int'], ParentType, ContextType>;
   message?: RequiredResolverFn<ResolversTypes['String'], ParentType, ContextType>;
   name?: RequiredResolverFn<ResolversTypes['String'], ParentType, ContextType>;
+  phone?: RequiredResolverFn<ResolversTypes['String'], ParentType, ContextType>;
+  product?: RequiredResolverFn<ResolversTypes['String'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 

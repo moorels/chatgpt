@@ -30,11 +30,21 @@ describe('contacts', () => {
 
   scenario('creates a contact', async () => {
     const result = await createContact({
-      input: { name: 'String', email: 'String', message: 'String' },
+      input: {
+        name: 'String',
+        company: 'String',
+        email: 'String',
+        phone: 'String',
+        product: 'String',
+        message: 'String',
+      },
     })
 
     expect(result.name).toEqual('String')
+    expect(result.company).toEqual('String')
     expect(result.email).toEqual('String')
+    expect(result.phone).toEqual('String')
+    expect(result.product).toEqual('String')
     expect(result.message).toEqual('String')
   })
 

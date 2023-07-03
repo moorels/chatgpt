@@ -2,7 +2,10 @@
 CREATE TABLE "Contact" (
     "id" SERIAL NOT NULL,
     "name" TEXT NOT NULL,
+    "company" TEXT NOT NULL,
     "email" TEXT NOT NULL,
+    "phone" TEXT NOT NULL,
+    "product" TEXT NOT NULL,
     "message" TEXT NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
@@ -18,6 +21,8 @@ CREATE TABLE "User" (
     "salt" TEXT NOT NULL,
     "resetToken" TEXT,
     "resetTokenExpiresAt" TIMESTAMP(3),
+    "completed" TEXT,
+    "notes" TEXT,
 
     CONSTRAINT "User_pkey" PRIMARY KEY ("id")
 );

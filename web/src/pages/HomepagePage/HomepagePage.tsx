@@ -1,10 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
 import { MetaTags } from '@redwoodjs/web'
 
+import NewContact from 'src/components/Contact/NewContact'
+
 const HomepagePage = () => {
   return (
     <>
-      <MetaTags title="Homepage" description="Chat Gpt" />
+      <MetaTags
+        title="Homepage"
+        description="Sync AI Australia See how a Multi AI bot solution can automate digital engagement across your business, lowering your cost to serve and improving customer and employee experience."
+      />
 
       <div className=" bg-slate-700 text-center font-libre text-3xl text-white"></div>
 
@@ -13,7 +18,7 @@ const HomepagePage = () => {
           <div className="mb-20 flex w-full flex-col flex-wrap items-center bg-slate-700 text-center">
             <div className=" flex w-full flex-col flex-wrap items-center bg-slate-700  px-8 text-center">
               <h1 className="title-font mb-2 bg-slate-700 py-8 text-2xl font-medium text-white sm:text-3xl">
-                Integrating artificial intelligence into your business model
+                Integrating artificial intelligence into your business systems
               </h1>
               <p className="w-full leading-relaxed text-white lg:w-1/2">
                 When potential clients ask our expert staff what they can
@@ -21,6 +26,10 @@ const HomepagePage = () => {
                 opportunities are endless. With so many options on the table,
                 it’s often a case of needing to identify how many, not which one
                 of our ai intelligent solutions they want to embrace.
+              </p>
+              <p className="  w-full leading-relaxed text-white lg:w-1/2">
+                Our AI solutions can easily be integrated into your existing
+                website or application.
               </p>
               <h1 className="title-font mb-2 bg-slate-700 py-4 text-2xl font-medium text-white sm:text-3xl">
                 Revolutionize the customer experience with AI
@@ -138,139 +147,13 @@ const HomepagePage = () => {
           </div>
         </div>
       </section>
-      <section className="body-font text-gray-600">
-        <div className="container mx-auto px-5 py-24">
-          <div className="mb-20 text-center">
-            <h1 className="title-font mb-4 text-center text-2xl font-medium text-gray-900 sm:text-3xl">
-              Raw Denim Heirloom Man Braid
-            </h1>
-            <p className="mx-auto text-base leading-relaxed lg:w-3/4 xl:w-2/4">
-              Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-              taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh
-              mi pug.
-            </p>
+      <div className="flex min-h-screen items-center justify-center bg-slate-700 p-6">
+        <div className="container mx-auto max-w-screen-lg">
+          <div>
+            <NewContact />
           </div>
-          <div className="-mx-2 flex flex-wrap sm:mx-auto sm:mb-2 lg:w-4/5">
-            <div className="w-full p-2 sm:w-1/2">
-              <div className="flex h-full items-center rounded bg-gray-100 p-4">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="3"
-                  className="mr-4 h-6 w-6 flex-shrink-0 text-indigo-500"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                  <path d="M22 4L12 14.01l-3-3"></path>
-                </svg>
-                <span className="title-font font-medium">
-                  Authentic Cliche Forage
-                </span>
-              </div>
-            </div>
-            <div className="w-full p-2 sm:w-1/2">
-              <div className="flex h-full items-center rounded bg-gray-100 p-4">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="3"
-                  className="mr-4 h-6 w-6 flex-shrink-0 text-indigo-500"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                  <path d="M22 4L12 14.01l-3-3"></path>
-                </svg>
-                <span className="title-font font-medium">
-                  Kinfolk Chips Snackwave
-                </span>
-              </div>
-            </div>
-            <div className="w-full p-2 sm:w-1/2">
-              <div className="flex h-full items-center rounded bg-gray-100 p-4">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="3"
-                  className="mr-4 h-6 w-6 flex-shrink-0 text-indigo-500"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                  <path d="M22 4L12 14.01l-3-3"></path>
-                </svg>
-                <span className="title-font font-medium">
-                  Coloring Book Ethical
-                </span>
-              </div>
-            </div>
-            <div className="w-full p-2 sm:w-1/2">
-              <div className="flex h-full items-center rounded bg-gray-100 p-4">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="3"
-                  className="mr-4 h-6 w-6 flex-shrink-0 text-indigo-500"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                  <path d="M22 4L12 14.01l-3-3"></path>
-                </svg>
-                <span className="title-font font-medium">
-                  Typewriter Polaroid Cray
-                </span>
-              </div>
-            </div>
-            <div className="w-full p-2 sm:w-1/2">
-              <div className="flex h-full items-center rounded bg-gray-100 p-4">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="3"
-                  className="mr-4 h-6 w-6 flex-shrink-0 text-indigo-500"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                  <path d="M22 4L12 14.01l-3-3"></path>
-                </svg>
-                <span className="title-font font-medium">
-                  Pack Truffaut Blue
-                </span>
-              </div>
-            </div>
-            <div className="w-full p-2 sm:w-1/2">
-              <div className="flex h-full items-center rounded bg-gray-100 p-4">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="3"
-                  className="mr-4 h-6 w-6 flex-shrink-0 text-indigo-500"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                  <path d="M22 4L12 14.01l-3-3"></path>
-                </svg>
-                <span className="title-font font-medium">
-                  The Catcher In The Rye
-                </span>
-              </div>
-            </div>
-          </div>
-          <button className="mx-auto mt-16 flex rounded border-0 bg-indigo-500 px-8 py-2 text-lg text-white hover:bg-indigo-600 focus:outline-none">
-            Button
-          </button>
         </div>
-      </section>
+      </div>
     </>
   )
 }

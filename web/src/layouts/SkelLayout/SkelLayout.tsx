@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useContext } from 'react'
 
 import { Link, routes } from '@redwoodjs/router'
+import { MetaTags } from '@redwoodjs/web'
 
 import { useAuth } from 'src/auth'
 
@@ -33,11 +34,15 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
   console.log('test')
   return (
     <>
+      <MetaTags
+        title="Store1"
+        description="Sync AI Australia See how a Multi AI bot solution can automate digital engagement across your business, lowering your cost to serve and improving customer and employee experience."
+      />
       <div className="body-font  bg-slate-600  text-gray-600">
         <header className="body-font bg-slate-600  text-gray-600">
           <div className="  flex flex-col flex-wrap items-center p-3 md:flex-row ">
-            <div className="title-font mb-2 flex items-center font-medium text-gray-900 md:mb-0 ">
-              <Link to={routes.homepage()}>
+            <div className="title-font mb-2 flex items-center font-medium text-gray-900 md:mb-0">
+              <Link to={routes.homepage()} className="animate-pulse ">
                 <svg fill="none" viewBox="0 0 24 24" height="2em" width="2em">
                   <path
                     fill="currentColor"
@@ -54,9 +59,7 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
                 </svg>
               </Link>
               <Link to={routes.homepage()}>
-                <span className="ml-3 animate-pulse text-xl text-slate-200">
-                  Sync AI
-                </span>
+                <span className="ml-3 text-xl text-slate-200">Sync AI</span>
               </Link>
             </div>
 

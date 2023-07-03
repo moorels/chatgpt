@@ -9,7 +9,10 @@ export const QUERY = gql`
     contact: contact(id: $id) {
       id
       name
+      company
       email
+      phone
+      product
       message
       createdAt
     }

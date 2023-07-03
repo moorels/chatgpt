@@ -46,7 +46,10 @@ const ContactsList = ({ contacts }: FindContacts) => {
           <tr>
             <th>Id</th>
             <th>Name</th>
+            <th>Company</th>
             <th>Email</th>
+            <th>Phone</th>
+            <th>Product</th>
             <th>Message</th>
             <th>Created at</th>
             <th>&nbsp;</th>
@@ -57,7 +60,10 @@ const ContactsList = ({ contacts }: FindContacts) => {
             <tr key={contact.id}>
               <td>{truncate(contact.id)}</td>
               <td>{truncate(contact.name)}</td>
+              <td>{truncate(contact.company)}</td>
               <td>{truncate(contact.email)}</td>
+              <td>{truncate(contact.phone)}</td>
+              <td>{truncate(contact.product)}</td>
               <td>{truncate(contact.message)}</td>
               <td>{timeTag(contact.createdAt)}</td>
               <td>

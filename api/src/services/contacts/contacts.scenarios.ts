@@ -3,8 +3,26 @@ import type { ScenarioData } from '@redwoodjs/testing/api'
 
 export const standard = defineScenario<Prisma.ContactCreateArgs>({
   contact: {
-    one: { data: { name: 'String', email: 'String', message: 'String' } },
-    two: { data: { name: 'String', email: 'String', message: 'String' } },
+    one: {
+      data: {
+        name: 'String',
+        company: 'String',
+        email: 'String',
+        phone: 'String',
+        product: 'String',
+        message: 'String',
+      },
+    },
+    two: {
+      data: {
+        name: 'String',
+        company: 'String',
+        email: 'String',
+        phone: 'String',
+        product: 'String',
+        message: 'String',
+      },
+    },
   },
 })
 

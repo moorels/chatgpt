@@ -1,13 +1,13 @@
+import type {
+  DeleteContactMutationVariables,
+  FindContactById,
+} from 'types/graphql'
+
 import { Link, routes, navigate } from '@redwoodjs/router'
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 
 import { timeTag } from 'src/lib/formatters'
-
-import type {
-  DeleteContactMutationVariables,
-  FindContactById,
-} from 'types/graphql'
 
 const DELETE_CONTACT_MUTATION = gql`
   mutation DeleteContactMutation($id: Int!) {
@@ -57,8 +57,20 @@ const Contact = ({ contact }: Props) => {
               <td>{contact.name}</td>
             </tr>
             <tr>
+              <th>Company</th>
+              <td>{contact.company}</td>
+            </tr>
+            <tr>
               <th>Email</th>
               <td>{contact.email}</td>
+            </tr>
+            <tr>
+              <th>Phone</th>
+              <td>{contact.phone}</td>
+            </tr>
+            <tr>
+              <th>Product</th>
+              <td>{contact.product}</td>
             </tr>
             <tr>
               <th>Message</th>

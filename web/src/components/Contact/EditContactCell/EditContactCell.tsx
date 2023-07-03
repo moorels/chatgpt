@@ -12,7 +12,10 @@ export const QUERY = gql`
     contact: contact(id: $id) {
       id
       name
+      company
       email
+      phone
+      product
       message
       createdAt
     }
@@ -23,7 +26,10 @@ const UPDATE_CONTACT_MUTATION = gql`
     updateContact(id: $id, input: $input) {
       id
       name
+      company
       email
+      phone
+      product
       message
       createdAt
     }

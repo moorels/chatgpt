@@ -4,6 +4,11 @@ import { MetaTags } from '@redwoodjs/web'
 const ExplorePage = () => {
   return (
     <>
+      <MetaTags
+        title="Explor"
+        description="Sync AI Australia See how a Multi AI bot solution can automate digital engagement across your business, lowering your cost to serve and improving customer and employee experience."
+      />
+
       <div className="body-font  bg-slate-600  text-gray-600">
         <header className="body-font bg-slate-600  text-gray-600">
           <div className="  flex flex-col p-3 sm:flex-row lg:flex-row ">
@@ -117,17 +122,17 @@ const ExplorePage = () => {
             </h1>
             <p className="w-full leading-relaxed text-white lg:w-1/2">
               <p>Do you have this item in stock ? </p>
-              <p>Can you explain in detail this service you offer ?</p>
+              <p>Can you explain in detail the services you offer ?</p>
               <p>What products do you sell ? </p>
               <p>Can i get a price on this item ? </p>
-              <p>What are the store hours ? </p>
-              <p> Can you recommend a product similar to this one ? </p>
+              <p>Give me a list of your prices ? </p>
+              <p>Can you recommend a you best selling products ?</p>
               <p>What payment methods do accept ? </p>
               <p>Can you provide me with the product specifications for ? </p>
               <p>How much for for delivery of this product ? </p>
             </p>
             <h1 className="title-font mb-2 text-2xl font-medium text-white sm:text-3xl">
-              Our chat AI can understand over 50,000 questions.
+              Our chat AI can mutate over 500,000 question types .
             </h1>
             <h1 className="title-font mb-12 text-2xl font-medium text-white sm:text-3xl">
               based on data provided by your business.

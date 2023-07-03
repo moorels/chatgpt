@@ -21,17 +21,23 @@ export type Scalars = {
 
 export type Contact = {
   __typename?: 'Contact';
+  company: Scalars['String'];
   createdAt: Scalars['DateTime'];
   email: Scalars['String'];
   id: Scalars['Int'];
   message: Scalars['String'];
   name: Scalars['String'];
+  phone: Scalars['String'];
+  product: Scalars['String'];
 };
 
 export type CreateContactInput = {
+  company: Scalars['String'];
   email: Scalars['String'];
   message: Scalars['String'];
   name: Scalars['String'];
+  phone: Scalars['String'];
+  product: Scalars['String'];
 };
 
 export type CreateUserInput = {
@@ -126,9 +132,12 @@ export type Redwood = {
 };
 
 export type UpdateContactInput = {
+  company?: InputMaybe<Scalars['String']>;
   email?: InputMaybe<Scalars['String']>;
   message?: InputMaybe<Scalars['String']>;
   name?: InputMaybe<Scalars['String']>;
+  phone?: InputMaybe<Scalars['String']>;
+  product?: InputMaybe<Scalars['String']>;
 };
 
 export type UpdateUserInput = {
@@ -167,19 +176,19 @@ export type FindContactByIdVariables = Exact<{
 }>;
 
 
-export type FindContactById = { __typename?: 'Query', contact?: { __typename?: 'Contact', id: number, name: string, email: string, message: string, createdAt: string } | null };
+export type FindContactById = { __typename?: 'Query', contact?: { __typename?: 'Contact', id: number, name: string, company: string, email: string, phone: string, product: string, message: string, createdAt: string } | null };
 
 export type FindContactsVariables = Exact<{ [key: string]: never; }>;
 
 
-export type FindContacts = { __typename?: 'Query', contacts: Array<{ __typename?: 'Contact', id: number, name: string, email: string, message: string, createdAt: string }> };
+export type FindContacts = { __typename?: 'Query', contacts: Array<{ __typename?: 'Contact', id: number, name: string, company: string, email: string, phone: string, product: string, message: string, createdAt: string }> };
 
 export type EditContactByIdVariables = Exact<{
   id: Scalars['Int'];
 }>;
 
 
-export type EditContactById = { __typename?: 'Query', contact?: { __typename?: 'Contact', id: number, name: string, email: string, message: string, createdAt: string } | null };
+export type EditContactById = { __typename?: 'Query', contact?: { __typename?: 'Contact', id: number, name: string, company: string, email: string, phone: string, product: string, message: string, createdAt: string } | null };
 
 export type UpdateContactMutationVariables = Exact<{
   id: Scalars['Int'];
@@ -187,7 +196,7 @@ export type UpdateContactMutationVariables = Exact<{
 }>;
 
 
-export type UpdateContactMutation = { __typename?: 'Mutation', updateContact: { __typename?: 'Contact', id: number, name: string, email: string, message: string, createdAt: string } };
+export type UpdateContactMutation = { __typename?: 'Mutation', updateContact: { __typename?: 'Contact', id: number, name: string, company: string, email: string, phone: string, product: string, message: string, createdAt: string } };
 
 export type CreateContactMutationVariables = Exact<{
   input: CreateContactInput;
