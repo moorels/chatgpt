@@ -10,8 +10,6 @@ import { useState } from 'react'
 
 import { Set, Router, Route, Private } from '@redwoodjs/router'
 
-import ScaffoldLayout from 'src/layouts/ScaffoldLayout'
-
 import { UserContext } from '../UserContext'
 
 import { useAuth } from './auth'
