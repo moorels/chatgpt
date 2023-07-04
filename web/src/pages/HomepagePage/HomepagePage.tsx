@@ -193,7 +193,7 @@ const HomepagePage = () => {
                 <p className=" leading-normal">Phone: 0468 609 702</p>
                 <p className=" leading-normal">Email: Sales@syncai.com.au</p>
                 <p className=" leading-normal">
-                  21 Brindalee Mews Chadstone VIC 3184
+                  21 Brindalee Mews Chadstone 3184
                 </p>
               </span>
             </div>
