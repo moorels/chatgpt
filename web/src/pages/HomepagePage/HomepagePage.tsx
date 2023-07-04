@@ -167,7 +167,7 @@ const HomepagePage = () => {
           </section>
           <footer className="body-font bg-slate-700 text-gray-600">
             <div className="container mx-auto flex flex-col items-center px-5 py-8 sm:flex-row">
-              <a className="title-font flex items-center justify-center font-medium text-gray-900 md:justify-start">
+              <a className="title-font  flex items-center justify-center font-medium text-gray-900 md:justify-start">
                 <svg fill="none" viewBox="0 0 24 24" height="2em" width="2em">
                   <path
                     fill="currentColor"
@@ -182,11 +182,11 @@ const HomepagePage = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-                <span className="ml-3 items-center text-xl text-white">
+                <span className="items-left ml-3 justify-center text-xl text-white">
                   SYNC AI
                 </span>
               </a>
-              <p className="mt-4 items-center text-sm text-white sm:ml-4 sm:mt-0 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:pl-4">
+              <p className=" mt-4  text-sm text-white sm:ml-4 sm:mt-0 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:pl-4 ">
                 © 2023 Sync AI
               </p>
               <span className="mt-4 inline-flex flex-col items-center justify-center text-white sm:ml-auto sm:mt-0 sm:justify-start">
