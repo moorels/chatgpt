@@ -2,6 +2,8 @@
 import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
+import NewContact from 'src/components/Contact/NewContact'
+
 const ExplorePage = () => {
   return (
     <>
@@ -53,10 +55,10 @@ const ExplorePage = () => {
           <div className=" focus:shadow-outline m-0 w-60 justify-center rounded-lg p-0 text-center align-middle text-2xl text-slate-100"></div>
         </header>
       </div>
-      <div className="h-screen bg-slate-700">
-        <div className="mb-20 flex w-full flex-col flex-wrap items-center bg-slate-700 text-center">
-          <div className=" flex w-full flex-col flex-wrap items-center bg-slate-700  px-8 text-center">
-            <p className="mb-8 mt-8 w-full leading-relaxed text-white lg:w-1/2">
+      <div className="  bg-slate-700">
+        <div className="mb-20 flex  w-full flex-col flex-wrap items-center bg-slate-700 text-center">
+          <div className=" flex  w-full flex-col flex-wrap items-center bg-slate-700  px-8 text-center">
+            <p className="mb-8 mt-8 w-full leading-relaxed text-white lg:w-1/2 ">
               Our Ai chat technologies are trained on data provided by your
               business. The more data you provide the more accurate the
               responses will be. We can take all your current website, business
@@ -66,7 +68,7 @@ const ExplorePage = () => {
               Explore Our Example Chat AI Stores.
             </p>
             <p className="title-font  bg-slate-700 py-8 font-medium text-white">
-              <div className="  flex flex-col p-3 sm:flex-row lg:flex-row ">
+              <div className="flex flex-col p-3 sm:flex-row lg:flex-row ">
                 <ul>
                   <div className=" bg-white-500 place-content-center p-3 text-white">
                     <Link
@@ -132,12 +134,20 @@ const ExplorePage = () => {
               <p>Can you provide me with the product specifications for ? </p>
               <p>How much for for delivery of this product ? </p>
             </p>
-            <h1 className="title-font mb-2 text-2xl font-medium text-white sm:text-3xl">
-              Our chat AI can mutate over 500,000 question types .
+            <h1 className="title-font mb-2 text-2xl font-medium text-white sm:text-3xl ">
+              Our chat AI can mutate over 500,000 question types.
             </h1>
-            <h1 className="title-font mb-12 text-2xl font-medium text-white sm:text-3xl">
+            <h1 className="title-font mb-6 bg-slate-700 text-2xl font-medium text-white sm:text-3xl">
               based on data provided by your business.
             </h1>
+          </div>
+        </div>
+        <div className="container mx-auto  max-w-screen-lg align-middle">
+          <div className="  flex-row  items-center p-3  sm:flex-row lg:flex-row">
+            <h1 className="title-font mb-4 items-center text-2xl font-medium text-white sm:text-3xl">
+              Contact Us
+            </h1>
+            <NewContact />
           </div>
         </div>
         <footer className="body-font bg-slate-700 text-gray-600">

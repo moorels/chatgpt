@@ -4,7 +4,6 @@ import { MetaTags } from '@redwoodjs/web'
 
 import NewContact from 'src/components/Contact/NewContact'
 
-import Accordion from './Accordion'
 const HomepagePage = () => {
   return (
     <>
