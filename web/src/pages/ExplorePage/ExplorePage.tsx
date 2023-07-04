@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
@@ -139,6 +140,39 @@ const ExplorePage = () => {
             </h1>
           </div>
         </div>
+        <footer className="body-font bg-slate-700 text-gray-600">
+          <div className="container mx-auto flex flex-col items-center px-5 py-8 sm:flex-row">
+            <a className="title-font flex items-center justify-center font-medium text-gray-900 md:justify-start">
+              <svg fill="none" viewBox="0 0 24 24" height="2em" width="2em">
+                <path
+                  fill="currentColor"
+                  fillRule="evenodd"
+                  d="M9 22a1 1 0 11-2 0 1 1 0 012 0zm4 0a1 1 0 11-2 0 1 1 0 012 0zm3 1a1 1 0 100-2 1 1 0 000 2z"
+                  clipRule="evenodd"
+                />
+                <path
+                  fill="currentColor"
+                  fillRule="evenodd"
+                  d="M9 2a1 1 0 11-2 0 1 1 0 012 0zm4 0a1 1 0 11-2 0 1 1 0 012 0zm3 1a1 1 0 100-2 1 1 0 000 2zM9 22a1 1 0 11-2 0 1 1 0 012 0zm4 0a1 1 0 11-2 0 1 1 0 012 0zm3 1a1 1 0 100-2 1 1 0 000 2zm7-7a1 1 0 10-2 0 1 1 0 002 0zm0-4a1 1 0 10-2 0 1 1 0 002 0zm-1-5a1 1 0 110 2 1 1 0 010-2zM2 15a1 1 0 110 2 1 1 0 010-2zm0-4a1 1 0 110 2 1 1 0 010-2zm1-3a1 1 0 10-2 0 1 1 0 002 0zm14-2H7a1 1 0 00-1 1v10a1 1 0 001 1h10a1 1 0 001-1V7a1 1 0 00-1-1zM7 4a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm7 6h-4v4h4v-4zM8 8v8h8V8H8z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <span className="ml-3 items-center text-xl text-white">
+                SYNC AI
+              </span>
+            </a>
+            <p className="mt-4 items-center text-sm text-white sm:ml-4 sm:mt-0 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:pl-4">
+              © 2023 Sync AI
+            </p>
+            <span className="mt-4 inline-flex flex-col items-center justify-center text-white sm:ml-auto sm:mt-0 sm:justify-start">
+              <p className=" leading-normal">Phone: 0468 609 702</p>
+              <p className=" leading-normal">Email: Sales@syncai.com.au</p>
+              <p className=" leading-normal">
+                21 Brindalee Mews Chadstone VIC 3184
+              </p>
+            </span>
+          </div>
+        </footer>
       </div>
     </>
   )
