@@ -38,6 +38,7 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
         title="Store1"
         description="Sync AI Australia See how a Multi AI bot solution can automate digital engagement across your business, lowering your cost to serve and improving customer and employee experience."
       />
+
       <div className="body-font  bg-slate-600  text-gray-600">
         <header className="body-font bg-slate-600  text-gray-600">
           <div className="  flex flex-col flex-wrap items-center p-3 md:flex-row ">

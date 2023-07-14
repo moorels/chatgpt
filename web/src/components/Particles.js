@@ -25,8 +25,8 @@ const ParticlesComponent = (props) => {
       particles: {
         links: {
           enable: true, // enabling this will make particles linked together
-          distance: 50,
-          color: '#bf4155', // maximum distance for linking the particles
+          distance: 40,
+          color: '#fff', // maximum distance for linking the particles
         },
         move: {
           direction: 'none',
@@ -34,21 +34,21 @@ const ParticlesComponent = (props) => {
           outModes: {
             default: 'bounce',
           },
-          random: false,
-          speed: 1,
-          straight: false,
+          random: true,
+          speed: 0.5,
+          straight: true,
         },
         opacity: {
-          value: { min: 0.3, max: 0.7 }, // using a different opacity, to have some semitransparent effects
+          value: { value: 0.5 }, // using a different opacity, to have some semitransparent effects
         },
         size: {
-          value: { min: 1, max: 1 },
+          value: { min: 0, max: 1 },
           // let's randomize the particles size a bit
         },
         number: {
           density: {
             enable: true,
-            area: 100,
+            area: 120,
           },
           value: 15,
         },
