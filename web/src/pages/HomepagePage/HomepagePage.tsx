@@ -4,6 +4,8 @@ import { MetaTags } from '@redwoodjs/web'
 
 import NewContact from 'src/components/Contact/NewContact'
 
+import Particles from '../../components/Particles'
+
 const HomepagePage = () => {
   return (
     <>
@@ -12,15 +14,16 @@ const HomepagePage = () => {
         description="Sync AI Australia See how a Multi AI bot solution can automate digital engagement across your business, lowering your cost to serve and improving customer and employee experience."
       />
 
-      <div className=" bg-slate-700 text-center font-libre text-3xl text-white"></div>
-
-      <section className="body-font bg-slate-700 text-white ">
-        <div className="container mx-auto bg-slate-700 px-5 py-24">
+      <div className="  text-center font-libre text-3xl text-white"></div>
+      <Particles />
+      <section className="body-font  text-white ">
+        <div className="container mx-auto  px-5 py-24">
           <div className="mb-20 flex w-full flex-col flex-wrap items-center bg-slate-700 text-center">
             <div className=" flex w-full flex-col flex-wrap items-center bg-slate-700  px-8 text-center">
-              <h1 className="title-font mb-2 bg-slate-700 py-8 text-2xl font-medium text-white sm:text-3xl">
+              <h1 className="title-font mb-2 py-8 text-2xl font-medium text-white sm:text-3xl">
                 Integrating artificial intelligence into your business systems
               </h1>
+
               <p className="w-full leading-relaxed text-white lg:w-1/2">
                 When potential clients ask our expert staff what they can
                 achieve with intelligent automation, the simple answer is - the
@@ -55,8 +58,8 @@ const HomepagePage = () => {
               </p>
             </div>
           </div>
-          <div className="-m-4 flex flex-wrap">
-            <div className="p-4 md:w-1/2 xl:w-1/3">
+          <div className="-m-4 flex flex-wrap bg-slate-700">
+            <div className="p-4 md:w-1/2 xl:w-1/3 ">
               <div className="rounded-lg border border-gray-200 p-6">
                 <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-300 ">
                   <svg
@@ -149,7 +152,7 @@ const HomepagePage = () => {
           </div>
         </div>
       </section>
-      <div className="flex min-h-screen items-center justify-center bg-slate-700 p-6">
+      <div className="flex min-h-screen items-center justify-center  p-6">
         <div className="container mx-auto max-w-screen-lg">
           <div>
             <h1 className="title-font mb-4 text-2xl font-medium text-white sm:text-3xl">
@@ -164,7 +167,7 @@ const HomepagePage = () => {
               </div>
             </div>
           </section>
-          <footer className="body-font bg-slate-700 text-gray-600">
+          <footer className="body-font  text-gray-600">
             <div className="container mx-auto flex flex-col items-center px-5 py-8 sm:flex-row">
               <a className="title-font  flex items-center justify-center font-medium text-gray-900 md:justify-start">
                 <svg fill="none" viewBox="0 0 24 24" height="2em" width="2em">
