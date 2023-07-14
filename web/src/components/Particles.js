@@ -6,13 +6,15 @@ import { loadSlim } from 'tsparticles-slim' // loads tsparticles-slim
 //import { loadFull } from "tsparticles"; // loads tsparticles
 
 // tsParticles Repository: https://github.com/matteobruni/tsparticles
-// tsParticles Website: https://particles.js.org/
+// tsParticles Website: https://particles.js.org/articles.defaultProps = {
+
 const ParticlesComponent = (props) => {
   // using useMemo is not mandatory, but it's recommended since this value can be memoized if static
   const options = useMemo(() => {
     // using an empty options object will load the default options, which are static particles with no background and 3px radius, opacity 100%, white color
     // all options can be found here: https://particles.js.org/docs/interfaces/Options_Interfaces_IOptions.IOptions.html
     return {
+      fpsLimit: 120,
       autoPlay: true, // enables the particles animation, it's enabled by default
       background: {
         color: '#334155', // this sets a background color for the canvas
@@ -25,9 +27,17 @@ const ParticlesComponent = (props) => {
       particles: {
         links: {
           enable: true, // enabling this will make particles linked together
-          distance: 40,
-          color: '#fff', // maximum distance for linking the particles
+          distance: 80,
+          color: '#fff',
+          width: 1, // maximum distance for linking the particles
         },
+        shape: {
+          type: 'circle',
+          stroke: {
+            width: 8,
+          },
+        },
+
         move: {
           direction: 'none',
           enable: true,
@@ -45,6 +55,7 @@ const ParticlesComponent = (props) => {
           value: { min: 0, max: 1 },
           // let's randomize the particles size a bit
         },
+
         number: {
           density: {
             enable: true,
