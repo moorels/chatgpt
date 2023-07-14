@@ -35,8 +35,8 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
   return (
     <>
       <MetaTags
-        title="Store1"
-        description="Sync AI Australia See how a Multi AI bot solution can automate digital engagement across your business, lowering your cost to serve and improving customer and employee experience."
+        title="AI Automation Services Australia - Empowering Businesses with Intelligent Automation"
+        description="Unlock the potential of AI automation services in Australia for businesses. Streamline operations, increase efficiency, and drive growth with our cutting-edge solutions. Experience enhanced productivity, cost savings, and improved customer satisfaction through seamless automation."
       />
 
       <div className="body-font  bg-slate-600  text-gray-600">
