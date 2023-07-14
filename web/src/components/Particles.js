@@ -27,14 +27,14 @@ const ParticlesComponent = (props) => {
       particles: {
         links: {
           enable: true, // enabling this will make particles linked together
-          distance: 80,
-          color: '#fff',
+          distance: 120,
+          color: '#f3b1ff',
           width: 1, // maximum distance for linking the particles
         },
         shape: {
           type: 'circle',
           stroke: {
-            width: 8,
+            width: 6,
           },
         },
 
@@ -59,9 +59,9 @@ const ParticlesComponent = (props) => {
         number: {
           density: {
             enable: true,
-            area: 120,
+            area: 200,
           },
-          value: 15,
+          value: 10,
         },
       },
     }
