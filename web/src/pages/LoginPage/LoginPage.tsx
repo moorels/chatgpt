@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { useEffect, useState, useContext } from 'react'
+import { useEffect, useContext } from 'react'
 
 import {
   Form,
@@ -9,13 +9,14 @@ import {
   Submit,
   FieldError,
 } from '@redwoodjs/forms'
-import { Link, navigate, routes } from '@redwoodjs/router'
+import { navigate, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 import { toast, Toaster } from '@redwoodjs/web/toast'
 
 import { useAuth } from 'src/auth'
 
 import { UserContext } from '../../../UserContext'
+import Particles from '../../components/Particles'
 
 const LoginPage = () => {
   const { setUser } = useContext(UserContext)
@@ -24,7 +25,7 @@ const LoginPage = () => {
   useEffect(() => {
     if (isAuthenticated) {
       setUser(usernameRef.current.value)
-      navigate(routes.members())
+      navigate(routes.contacts())
     }
   }, [isAuthenticated])
 
@@ -51,11 +52,12 @@ const LoginPage = () => {
 
   return (
     <>
-      <MetaTags title="Login" />
+      <MetaTags title="Login " />
 
-      <main className="rw-main">
+      <main className=" h-screen w-screen py-24">
+        <Particles />
         <Toaster toastOptions={{ className: 'rw-toast', duration: 6000 }} />
-        <div className="rw-scaffold rw-login-container">
+        <div className="rw-scaffold rw-login-container ">
           <div className="rw-segment">
             <header className="rw-segment-header">
               <h2 className="rw-heading rw-heading-secondary">Login</h2>

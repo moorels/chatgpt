@@ -1,7 +1,11 @@
 import ContactsCell from 'src/components/Contact/ContactsCell'
 
 const ContactsPage = () => {
-  return <ContactsCell />
+  return (
+    <div>
+      <ContactsCell />
+    </div>
+  )
 }
 
 export default ContactsPage
