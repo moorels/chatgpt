@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useContext } from 'react'
 
-import { Link, routes } from '@redwoodjs/router'
+import { Link, navigate, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
 import { useAuth } from 'src/auth'
@@ -16,7 +16,20 @@ type SkelLayoutProps = {
 }
 
 const SkelLayout = ({ children }: SkelLayoutProps) => {
+  const [showModal, setShowModal] = useState(false)
+  const [showModal1, setShowModal1] = useState(false)
+
+  const toggleModal = () => {
+    setShowModal(!showModal)
+  }
+  const toggleModal1 = () => {
+    setShowModal1(!showModal1)
+  }
   const [isadmin, SetIsAdmin] = useState<boolean | null>(false)
+
+  const sign = () => {
+    navigate(routes.signup())
+  }
 
   let { user } = useContext<undefined | any>(UserContext)
   let welcome = ` Welcome: ${user}`
@@ -121,12 +134,40 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
             <div className={styles.typewriter}>
               <h1 className=" text-sm text-zinc-100 ">Welcome to Sync AI</h1>
             </div>
+            <div className="items-left px-32 ">
+              <button
+                onClick={toggleModal}
+                className="h-1.5 w-1.5 animate-spin border border-slate-500 px-[0.2] text-red-500 hover:bg-red-500"
+              ></button>{' '}
+            </div>
           </div>
           <div className=" focus:shadow-outline m-2 w-60 justify-center rounded-lg p-0 text-center align-middle text-2xl text-slate-100"></div>
         </header>
+        {showModal && (
+          <div className="modal float-right px-12 text-white">
+            <div className="modal-content">
+              <button
+                onClick={toggleModal1}
+                className="h-1 w-1 animate-spin border border-slate-500  text-slate-500 hover:bg-slate-600"
+              ></button>
+            </div>
+          </div>
+        )}
       </div>
-      <div></div>
+
       {children}
+      <div className=" mb-4 px-4">
+        {showModal1 && (
+          <div className="modal1 text-white">
+            <div className="modal1-content">
+              <button
+                onClick={sign}
+                className="h-1 w-1 animate-spin border border-slate-500 text-red-500 hover:bg-red-500"
+              ></button>
+            </div>
+          </div>
+        )}
+      </div>
     </>
   )
 }
