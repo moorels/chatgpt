@@ -16,6 +16,7 @@ import { useAuth } from './auth'
 import SkelLayout from './layouts/SkelLayout/SkelLayout'
 
 const Routes = () => {
+  const sum = Math.floor(Math.random() * 9999999)
   const [user, setUser] = useState('')
   const [cust, setCust] = useState('')
   return (
@@ -27,7 +28,7 @@ const Routes = () => {
             <Route path="/users/{id:Int}/edit" page={UserEditUserPage} name="editUser" />
             <Route path="/users/{id:Int}" page={UserUserPage} name="user" />
             <Route path="/users" page={UserUsersPage} name="users" />
-
+            <Route path={`/${sum}`} page={HelperPage} name="helper" />
             <Route path="/members" page={MembersPage} name="members" />
             <Route path="/contacts/{id:Int}/edit" page={ContactEditContactPage} name="editContact" />
             <Route path="/contacts/{id:Int}" page={ContactContactPage} name="contact" />

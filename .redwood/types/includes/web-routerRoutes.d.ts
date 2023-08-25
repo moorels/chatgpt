@@ -10,6 +10,7 @@ declare module '@redwoodjs/router' {
     editUser: (params?: RouteParams<"/users/{id:Int}/edit"> & QueryParams) => "/users/{id:Int}/edit"
     user: (params?: RouteParams<"/users/{id:Int}"> & QueryParams) => "/users/{id:Int}"
     users: (params?: RouteParams<"/users"> & QueryParams) => "/users"
+    helper: (params?: RouteParams<"/sum"> & QueryParams) => "/sum"
     members: (params?: RouteParams<"/members"> & QueryParams) => "/members"
     editContact: (params?: RouteParams<"/contacts/{id:Int}/edit"> & QueryParams) => "/contacts/{id:Int}/edit"
     contact: (params?: RouteParams<"/contacts/{id:Int}"> & QueryParams) => "/contacts/{id:Int}"

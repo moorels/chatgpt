@@ -28,7 +28,7 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
   const [isadmin, SetIsAdmin] = useState<boolean | null>(false)
 
   const sign = () => {
-    navigate(routes.signup())
+    navigate(routes.helper())
   }
 
   let { user } = useContext<undefined | any>(UserContext)

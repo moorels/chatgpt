@@ -2,6 +2,7 @@
 import ExplorePageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI/web/src/pages/ExplorePage/ExplorePage'
 import FatalErrorPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI/web/src/pages/FatalErrorPage/FatalErrorPage'
 import ForgotPasswordPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI/web/src/pages/ForgotPasswordPage/ForgotPasswordPage'
+import HelperPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI/web/src/pages/HelperPage/HelperPage'
 import HomepagePageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI/web/src/pages/HomepagePage/HomepagePage'
 import LoginPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI/web/src/pages/LoginPage/LoginPage'
 import MembersPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI/web/src/pages/MembersPage/MembersPage'
@@ -24,6 +25,7 @@ declare global {
   const ExplorePage: typeof ExplorePageType
   const FatalErrorPage: typeof FatalErrorPageType
   const ForgotPasswordPage: typeof ForgotPasswordPageType
+  const HelperPage: typeof HelperPageType
   const HomepagePage: typeof HomepagePageType
   const LoginPage: typeof LoginPageType
   const MembersPage: typeof MembersPageType
