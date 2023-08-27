@@ -18,12 +18,16 @@ type SkelLayoutProps = {
 const SkelLayout = ({ children }: SkelLayoutProps) => {
   const [showModal, setShowModal] = useState(false)
   const [showModal1, setShowModal1] = useState(false)
+  const [showModal2, setShowModal2] = useState(false)
 
   const toggleModal = () => {
     setShowModal(!showModal)
   }
   const toggleModal1 = () => {
     setShowModal1(!showModal1)
+  }
+  const toggleModal2 = () => {
+    setShowModal2(!showModal2)
   }
   const [isadmin, SetIsAdmin] = useState<boolean | null>(false)
 
@@ -148,21 +152,32 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
             <div className="modal-content">
               <button
                 onClick={toggleModal1}
-                className="h-0.5 w-0.5 border border-slate-500  text-slate-500 hover:bg-slate-600"
+                className="h-0.5 w-0.5 border border-slate-600  text-slate-600 hover:bg-slate-600"
               ></button>
             </div>
           </div>
         )}
       </div>
-
+      <div className="flex h-full w-full flex-col items-center justify-center ">
+        {showModal2 && (
+          <div className="modal2 text-white">
+            <div className="modal2-content">
+              <button
+                onClick={sign}
+                className="h-0.5 w-0.5 border border-slate-600  text-slate-600 hover:bg-slate-600"
+              ></button>
+            </div>
+          </div>
+        )}
+      </div>
       {children}
       <div className=" mb-4 px-4">
         {showModal1 && (
           <div className="modal1 text-white">
             <div className="modal1-content">
               <button
-                onClick={sign}
-                className="h-0.5 w-0.5 border border-slate-500 text-red-500 hover:bg-red-500"
+                onClick={toggleModal2}
+                className="h-0.5 w-0.5 border border-slate-600 text-red-500 hover:bg-red-500"
               ></button>
             </div>
           </div>
