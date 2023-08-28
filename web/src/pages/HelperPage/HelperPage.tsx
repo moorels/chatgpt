@@ -28,13 +28,16 @@ const HelperPage = () => {
 
         <label htmlFor="passcodeInput">.</label>
         <input
+          className=" rounded-md border-none bg-gray-100 bg-slate-700 px-1 py-0 text-slate-700 focus:outline-0 focus:ring-0"
           type="text"
           id="passcodeInput"
           value={passcode}
           onChange={(e) => setPasscode(e.target.value)}
         />
-        <button onClick={decodeString}>.</button>
-        <p>{decodedString}</p>
+        <button onClick={decodeString} className="text-slate-600">
+          .
+        </button>
+        <p className="text-slate-700">{decodedString}</p>
       </div>
     </>
   )

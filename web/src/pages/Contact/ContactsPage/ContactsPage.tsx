@@ -2,9 +2,11 @@ import ContactsCell from 'src/components/Contact/ContactsCell'
 
 const ContactsPage = () => {
   return (
-    <div>
-      <ContactsCell />
-    </div>
+    <>
+      <div>
+        <ContactsCell />
+      </div>
+    </>
   )
 }
 
