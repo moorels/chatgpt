@@ -17,28 +17,30 @@ const HelperPage = () => {
     if (passcodeMapping.hasOwnProperty(passcode)) {
       setDecodedString(passcodeMapping[passcode])
     } else {
-      setDecodedString('Invalid passcode. Please enter a valid passcode.')
+      setDecodedString('')
     }
   }
 
   return (
     <>
-      <div>
-        <MetaTags title="Helper" description="Helper page" />
+      <body className="h-[1220px] bg-slate-700">
+        <div>
+          <MetaTags title="Helper" description="Helper page" />
 
-        <label htmlFor="passcodeInput">.</label>
-        <input
-          className=" rounded-md border-none  bg-slate-700 px-1 py-0 text-slate-700 focus:outline-0 focus:ring-0"
-          type="text"
-          id="passcodeInput"
-          value={passcode}
-          onChange={(e) => setPasscode(e.target.value)}
-        />
-        <button onClick={decodeString} className="text-slate-600">
-          .
-        </button>
-        <p className="text-slate-700">{decodedString}</p>
-      </div>
+          <label htmlFor="passcodeInput">.</label>
+          <input
+            className=" rounded-md border-none  bg-slate-700 px-1 py-0 text-slate-700 focus:outline-0 focus:ring-0"
+            type="text"
+            id="passcodeInput"
+            value={passcode}
+            onChange={(e) => setPasscode(e.target.value)}
+          />
+          <button onClick={decodeString} className="text-slate-600">
+            .
+          </button>
+          <p className="text-slate-700">{decodedString}</p>
+        </div>
+      </body>
     </>
   )
 }

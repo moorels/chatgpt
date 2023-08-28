@@ -166,46 +166,45 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
           <div className=" focus:shadow-outline m-2 w-60 justify-center rounded-lg p-0 text-center align-middle text-2xl text-slate-100"></div>
         </header>
       </div>
-      <body className="h-[1200px] bg-slate-700">
-        {children}
-        <div className="py-12">
-          {showModal && (
-            <div className="modal float-right px-24 text-white">
-              <div className="modal-content">
+
+      {children}
+      <div className="py-12">
+        {showModal && (
+          <div className="modal float-right px-24 text-white">
+            <div className="modal-content">
+              <button
+                onClick={toggleModal1}
+                className="h-0.5 w-0.5 border border-slate-600  text-slate-600 hover:bg-slate-600"
+              ></button>
+            </div>
+          </div>
+        )}
+
+        <div className="px-4">
+          {showModal1 && (
+            <div className="modal1 text-white">
+              <div className="modal1-content">
                 <button
-                  onClick={toggleModal1}
+                  onClick={toggleModal2}
+                  className="h-0.5 w-0.5 border border-slate-600 text-red-500 hover:bg-red-500"
+                ></button>
+              </div>
+            </div>
+          )}
+        </div>
+        <div className="flex h-full w-full flex-col items-center justify-center ">
+          {showModal2 && (
+            <div className="modal2 text-white">
+              <div className="modal2-content">
+                <button
+                  onClick={sign}
                   className="h-0.5 w-0.5 border border-slate-600  text-slate-600 hover:bg-slate-600"
                 ></button>
               </div>
             </div>
           )}
-
-          <div className="px-4">
-            {showModal1 && (
-              <div className="modal1 text-white">
-                <div className="modal1-content">
-                  <button
-                    onClick={toggleModal2}
-                    className="h-0.5 w-0.5 border border-slate-600 text-red-500 hover:bg-red-500"
-                  ></button>
-                </div>
-              </div>
-            )}
-          </div>
-          <div className="flex h-full w-full flex-col items-center justify-center ">
-            {showModal2 && (
-              <div className="modal2 text-white">
-                <div className="modal2-content">
-                  <button
-                    onClick={sign}
-                    className="h-0.5 w-0.5 border border-slate-600  text-slate-600 hover:bg-slate-600"
-                  ></button>
-                </div>
-              </div>
-            )}
-          </div>
         </div>
-      </body>
+      </div>
     </>
   )
 }
