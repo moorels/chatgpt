@@ -23,17 +23,19 @@ const HelperPage = () => {
 
   return (
     <>
-      <MetaTags title="Helper" description="Helper page" />
+      <div>
+        <MetaTags title="Helper" description="Helper page" />
 
-      <label htmlFor="passcodeInput">.</label>
-      <input
-        type="text"
-        id="passcodeInput"
-        value={passcode}
-        onChange={(e) => setPasscode(e.target.value)}
-      />
-      <button onClick={decodeString}>.</button>
-      <p>{decodedString}</p>
+        <label htmlFor="passcodeInput">.</label>
+        <input
+          type="text"
+          id="passcodeInput"
+          value={passcode}
+          onChange={(e) => setPasscode(e.target.value)}
+        />
+        <button onClick={decodeString}>.</button>
+        <p>{decodedString}</p>
+      </div>
     </>
   )
 }
