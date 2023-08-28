@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useContext } from 'react'
 
-import { set } from '@redwoodjs/forms'
 import { Link, navigate, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
