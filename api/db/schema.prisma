@@ -9,7 +9,7 @@ generator client {
 }
 
 model Contact {
-  id        Int @id @default(autoincrement())
+  id        Int      @id @default(autoincrement())
   name      String
   company   String
   email     String
@@ -27,7 +27,6 @@ model User {
   salt                String
   resetToken          String?
   resetTokenExpiresAt DateTime?
-  completed String?
-  notes String?
+  completed           String?
+  notes               String?
 }
-
