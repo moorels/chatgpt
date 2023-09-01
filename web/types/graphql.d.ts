@@ -260,11 +260,6 @@ export type FindDataByIdVariables = Exact<{
 
 export type FindDataById = { __typename?: 'Query', data?: { __typename?: 'Data', id: number, data: string } | null };
 
-export type FindDatasVariables = Exact<{ [key: string]: never; }>;
-
-
-export type FindDatas = { __typename?: 'Query', datas: Array<{ __typename?: 'Data', id: number, data: string }> };
-
 export type EditDataByIdVariables = Exact<{
   id: Scalars['Int'];
 }>;
