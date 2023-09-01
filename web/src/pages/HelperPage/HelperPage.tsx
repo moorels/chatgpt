@@ -2,59 +2,6 @@ import { useState } from 'react'
 
 import { MetaTags } from '@redwoodjs/web'
 
-<<<<<<< HEAD
-//Get this Done
-import DatasCell from 'src/components/Data/DatasCell'
-//Get this Done
-
-const rx3 = ($Hc) => {
-  const $_$ = $Hc.charCodeAt(0)
-  const _0_a$_l = $Hc >= 'a' ? 97 : 65
-  const _0_d$_ = 48
-  const _0_a_r = 26
-  const _0_d_r = 10
-  const _1_A_1 = ($Hc >= 'a' && $Hc <= 'z') || ($Hc >= 'A' && $Hc <= 'Z')
-  const _1_D_1 = $Hc >= '0' && $Hc <= '9'
-  let _$t$_ = $_$
-  let _F$_ = 0
-  _F$_ = _1_A_1
-    ? $_$ -
-      _0_a$_l -
-      (_1_A_1 ? 12 : 0) +
-      (_1_A_1 ? _0_a_r : 0) +
-      (_1_A_1 ? 0 : _0_d_r)
-    : $_$ - _0_d$_ - (_1_D_1 ? 3 : 0) + (_1_D_1 ? _0_d_r : 0)
-  _$t$_ = (_F$_ % (_1_A_1 ? _0_a_r : _0_d_r)) + (_1_A_1 ? _0_a$_l : _0_d$_)
-  let tx1 = String.fromCharCode(_$t$_)
-  if (tx1 === '6') {
-    tx1 = '@'
-  }
-
-  return tx1
-}
-//Replace this local code with server data
-const h1 = (() => {
-  const _0x12c6_1 = [
-    '\x4B\x71\x78\x78\x61\x69\x40',
-    '\x38\x30\x31\x31\x30\x32\x36\x40',
-    '\x34\x35\x36\x37\x38\x39\x30\x31\x32\x33',
-  ]
-  const _0x12c6_2 = [
-    '\x4B\x71\x78\x78\x61\x69\x40',
-    '\x38\x30\x31\x31\x30\x32\x36\x40',
-    '\x34\x35\x36\x37\x38\x39\x30\x31\x32\x33',
-  ]
-  const _0x12c6_3 = [
-    '\x53\x64\x71\x71\x7A\x34\x33\x40\x40\x49\x74\x75\x66\x71',
-    '\x34\x33\x40\x40',
-  ]
-  const rx = _0x12c6_1.join('') + _0x12c6_2.join('') + _0x12c6_3.join('')
-
-  return rx
-})()
-//Replace this local code with server data
-=======
->>>>>>> 52c0b8cb22f79cb6bbbd061bf8c5c61d14602fe5
 const HelperPage = () => {
   const [reversedString, setReversedString] = useState('')
   const [rv2, setRv2] = useState('')
@@ -162,7 +109,7 @@ const HelperPage = () => {
           <button onClick={decodeString} className="text-slate-600">
             .
           </button>
-          {<DatasCell />}
+
           <p className="text-slate-700">{decodedString}</p>
         </div>
 
