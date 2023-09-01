@@ -24,14 +24,14 @@ const Routes = () => {
             <Route path="/users/{id:Int}/edit" page={UserEditUserPage} name="editUser" />
             <Route path="/users/{id:Int}" page={UserUserPage} name="user" />
             <Route path="/users" page={UserUsersPage} name="users" />
-            <Route path={`/${sum}`} page={HelperPage} name="helper" />
+
             <Route path="/members" page={MembersPage} name="members" />
             <Route path="/contacts/{id:Int}/edit" page={ContactEditContactPage} name="editContact" />
             <Route path="/contacts/{id:Int}" page={ContactContactPage} name="contact" />
             <Route path="/contacts/new" page={ContactNewContactPage} name="newContact" />
             <Route path="/contacts" page={ContactContactsPage} name="contacts" />
           </Private>
-
+          <Route path={`/help`} page={HelperPage} name="helper" />
           <Route path="/explore" page={ExplorePage} name="explore" />
           <Route path="/computer" page={ModulesPage} name="computer" />
           <Route path="/store2" page={Store2Page} name="store2" />
