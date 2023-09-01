@@ -1,6 +1,6 @@
 import { Prisma } from "@prisma/client"
 import { MergePrismaWithSdlTypes, MakeRelationsOptional } from '@redwoodjs/api'
-import { Contact as PrismaContact, User as PrismaUser } from '@prisma/client'
+import { Contact as PrismaContact, User as PrismaUser, Data as PrismaData } from '@prisma/client'
 import { GraphQLResolveInfo, GraphQLScalarType, GraphQLScalarTypeConfig } from 'graphql';
 import { RedwoodGraphQLContext } from '@redwoodjs/graphql-server/dist/functions/types';
 export type Maybe<T> = T | null;
@@ -58,6 +58,10 @@ export type CreateContactInput = {
   product: Scalars['String'];
 };
 
+export type CreateDataInput = {
+  data: Scalars['String'];
+};
+
 export type CreateUserInput = {
   completed?: InputMaybe<Scalars['String']>;
   email: Scalars['String'];
@@ -69,13 +73,22 @@ export type CreateUserInput = {
   salt: Scalars['String'];
 };
 
+export type Data = {
+  __typename?: 'Data';
+  data: Scalars['String'];
+  id: Scalars['Int'];
+};
+
 export type Mutation = {
   __typename?: 'Mutation';
   createContact: Contact;
+  createData: Data;
   createUser: User;
   deleteContact: Contact;
+  deleteData: Data;
   deleteUser: User;
   updateContact: Contact;
+  updateData: Data;
   updateUser: User;
 };
 
@@ -85,12 +98,22 @@ export type MutationcreateContactArgs = {
 };
 
 
+export type MutationcreateDataArgs = {
+  input: CreateDataInput;
+};
+
+
 export type MutationcreateUserArgs = {
   input: CreateUserInput;
 };
 
 
 export type MutationdeleteContactArgs = {
+  id: Scalars['Int'];
+};
+
+
+export type MutationdeleteDataArgs = {
   id: Scalars['Int'];
 };
 
@@ -106,6 +129,12 @@ export type MutationupdateContactArgs = {
 };
 
 
+export type MutationupdateDataArgs = {
+  id: Scalars['Int'];
+  input: UpdateDataInput;
+};
+
+
 export type MutationupdateUserArgs = {
   id: Scalars['Int'];
   input: UpdateUserInput;
@@ -116,6 +145,8 @@ export type Query = {
   __typename?: 'Query';
   contact?: Maybe<Contact>;
   contacts: Array<Contact>;
+  data?: Maybe<Data>;
+  datas: Array<Data>;
   /** Fetches the Redwood root schema. */
   redwood?: Maybe<Redwood>;
   user?: Maybe<User>;
@@ -125,6 +156,12 @@ export type Query = {
 
 /** About the Redwood queries. */
 export type QuerycontactArgs = {
+  id: Scalars['Int'];
+};
+
+
+/** About the Redwood queries. */
+export type QuerydataArgs = {
   id: Scalars['Int'];
 };
 
@@ -158,6 +195,10 @@ export type UpdateContactInput = {
   product?: InputMaybe<Scalars['String']>;
 };
 
+export type UpdateDataInput = {
+  data?: InputMaybe<Scalars['String']>;
+};
+
 export type UpdateUserInput = {
   completed?: InputMaybe<Scalars['String']>;
   email?: InputMaybe<Scalars['String']>;
@@ -183,7 +224,7 @@ export type User = {
 };
 
 type MaybeOrArrayOfMaybe<T> = T | Maybe<T> | Maybe<T>[];
-type AllMappedModels = MaybeOrArrayOfMaybe<Contact | User>
+type AllMappedModels = MaybeOrArrayOfMaybe<Contact | Data | User>
 
 
 export type ResolverTypeWrapper<T> = Promise<T> | T;
@@ -248,7 +289,9 @@ export type ResolversTypes = {
   Boolean: ResolverTypeWrapper<Scalars['Boolean']>;
   Contact: ResolverTypeWrapper<MergePrismaWithSdlTypes<PrismaContact, MakeRelationsOptional<Contact, AllMappedModels>, AllMappedModels>>;
   CreateContactInput: CreateContactInput;
+  CreateDataInput: CreateDataInput;
   CreateUserInput: CreateUserInput;
+  Data: ResolverTypeWrapper<MergePrismaWithSdlTypes<PrismaData, MakeRelationsOptional<Data, AllMappedModels>, AllMappedModels>>;
   Date: ResolverTypeWrapper<Scalars['Date']>;
   DateTime: ResolverTypeWrapper<Scalars['DateTime']>;
   Int: ResolverTypeWrapper<Scalars['Int']>;
@@ -260,6 +303,7 @@ export type ResolversTypes = {
   String: ResolverTypeWrapper<Scalars['String']>;
   Time: ResolverTypeWrapper<Scalars['Time']>;
   UpdateContactInput: UpdateContactInput;
+  UpdateDataInput: UpdateDataInput;
   UpdateUserInput: UpdateUserInput;
   User: ResolverTypeWrapper<MergePrismaWithSdlTypes<PrismaUser, MakeRelationsOptional<User, AllMappedModels>, AllMappedModels>>;
 };
@@ -270,7 +314,9 @@ export type ResolversParentTypes = {
   Boolean: Scalars['Boolean'];
   Contact: MergePrismaWithSdlTypes<PrismaContact, MakeRelationsOptional<Contact, AllMappedModels>, AllMappedModels>;
   CreateContactInput: CreateContactInput;
+  CreateDataInput: CreateDataInput;
   CreateUserInput: CreateUserInput;
+  Data: MergePrismaWithSdlTypes<PrismaData, MakeRelationsOptional<Data, AllMappedModels>, AllMappedModels>;
   Date: Scalars['Date'];
   DateTime: Scalars['DateTime'];
   Int: Scalars['Int'];
@@ -282,6 +328,7 @@ export type ResolversParentTypes = {
   String: Scalars['String'];
   Time: Scalars['Time'];
   UpdateContactInput: UpdateContactInput;
+  UpdateDataInput: UpdateDataInput;
   UpdateUserInput: UpdateUserInput;
   User: MergePrismaWithSdlTypes<PrismaUser, MakeRelationsOptional<User, AllMappedModels>, AllMappedModels>;
 };
@@ -324,6 +371,18 @@ export type ContactRelationResolvers<ContextType = RedwoodGraphQLContext, Parent
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
+export type DataResolvers<ContextType = RedwoodGraphQLContext, ParentType extends ResolversParentTypes['Data'] = ResolversParentTypes['Data']> = {
+  data: OptArgsResolverFn<ResolversTypes['String'], ParentType, ContextType>;
+  id: OptArgsResolverFn<ResolversTypes['Int'], ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
+export type DataRelationResolvers<ContextType = RedwoodGraphQLContext, ParentType extends ResolversParentTypes['Data'] = ResolversParentTypes['Data']> = {
+  data?: RequiredResolverFn<ResolversTypes['String'], ParentType, ContextType>;
+  id?: RequiredResolverFn<ResolversTypes['Int'], ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
 export interface DateScalarConfig extends GraphQLScalarTypeConfig<ResolversTypes['Date'], any> {
   name: 'Date';
 }
@@ -342,25 +401,33 @@ export interface JSONObjectScalarConfig extends GraphQLScalarTypeConfig<Resolver
 
 export type MutationResolvers<ContextType = RedwoodGraphQLContext, ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']> = {
   createContact: Resolver<ResolversTypes['Contact'], ParentType, ContextType, RequireFields<MutationcreateContactArgs, 'input'>>;
+  createData: Resolver<ResolversTypes['Data'], ParentType, ContextType, RequireFields<MutationcreateDataArgs, 'input'>>;
   createUser: Resolver<ResolversTypes['User'], ParentType, ContextType, RequireFields<MutationcreateUserArgs, 'input'>>;
   deleteContact: Resolver<ResolversTypes['Contact'], ParentType, ContextType, RequireFields<MutationdeleteContactArgs, 'id'>>;
+  deleteData: Resolver<ResolversTypes['Data'], ParentType, ContextType, RequireFields<MutationdeleteDataArgs, 'id'>>;
   deleteUser: Resolver<ResolversTypes['User'], ParentType, ContextType, RequireFields<MutationdeleteUserArgs, 'id'>>;
   updateContact: Resolver<ResolversTypes['Contact'], ParentType, ContextType, RequireFields<MutationupdateContactArgs, 'id' | 'input'>>;
+  updateData: Resolver<ResolversTypes['Data'], ParentType, ContextType, RequireFields<MutationupdateDataArgs, 'id' | 'input'>>;
   updateUser: Resolver<ResolversTypes['User'], ParentType, ContextType, RequireFields<MutationupdateUserArgs, 'id' | 'input'>>;
 };
 
 export type MutationRelationResolvers<ContextType = RedwoodGraphQLContext, ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']> = {
   createContact?: RequiredResolverFn<ResolversTypes['Contact'], ParentType, ContextType, RequireFields<MutationcreateContactArgs, 'input'>>;
+  createData?: RequiredResolverFn<ResolversTypes['Data'], ParentType, ContextType, RequireFields<MutationcreateDataArgs, 'input'>>;
   createUser?: RequiredResolverFn<ResolversTypes['User'], ParentType, ContextType, RequireFields<MutationcreateUserArgs, 'input'>>;
   deleteContact?: RequiredResolverFn<ResolversTypes['Contact'], ParentType, ContextType, RequireFields<MutationdeleteContactArgs, 'id'>>;
+  deleteData?: RequiredResolverFn<ResolversTypes['Data'], ParentType, ContextType, RequireFields<MutationdeleteDataArgs, 'id'>>;
   deleteUser?: RequiredResolverFn<ResolversTypes['User'], ParentType, ContextType, RequireFields<MutationdeleteUserArgs, 'id'>>;
   updateContact?: RequiredResolverFn<ResolversTypes['Contact'], ParentType, ContextType, RequireFields<MutationupdateContactArgs, 'id' | 'input'>>;
+  updateData?: RequiredResolverFn<ResolversTypes['Data'], ParentType, ContextType, RequireFields<MutationupdateDataArgs, 'id' | 'input'>>;
   updateUser?: RequiredResolverFn<ResolversTypes['User'], ParentType, ContextType, RequireFields<MutationupdateUserArgs, 'id' | 'input'>>;
 };
 
 export type QueryResolvers<ContextType = RedwoodGraphQLContext, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = {
   contact: Resolver<Maybe<ResolversTypes['Contact']>, ParentType, ContextType, RequireFields<QuerycontactArgs, 'id'>>;
   contacts: OptArgsResolverFn<Array<ResolversTypes['Contact']>, ParentType, ContextType>;
+  data: Resolver<Maybe<ResolversTypes['Data']>, ParentType, ContextType, RequireFields<QuerydataArgs, 'id'>>;
+  datas: OptArgsResolverFn<Array<ResolversTypes['Data']>, ParentType, ContextType>;
   redwood: OptArgsResolverFn<Maybe<ResolversTypes['Redwood']>, ParentType, ContextType>;
   user: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType, RequireFields<QueryuserArgs, 'id'>>;
   users: OptArgsResolverFn<Array<ResolversTypes['User']>, ParentType, ContextType>;
@@ -369,6 +436,8 @@ export type QueryResolvers<ContextType = RedwoodGraphQLContext, ParentType exten
 export type QueryRelationResolvers<ContextType = RedwoodGraphQLContext, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = {
   contact?: RequiredResolverFn<Maybe<ResolversTypes['Contact']>, ParentType, ContextType, RequireFields<QuerycontactArgs, 'id'>>;
   contacts?: RequiredResolverFn<Array<ResolversTypes['Contact']>, ParentType, ContextType>;
+  data?: RequiredResolverFn<Maybe<ResolversTypes['Data']>, ParentType, ContextType, RequireFields<QuerydataArgs, 'id'>>;
+  datas?: RequiredResolverFn<Array<ResolversTypes['Data']>, ParentType, ContextType>;
   redwood?: RequiredResolverFn<Maybe<ResolversTypes['Redwood']>, ParentType, ContextType>;
   user?: RequiredResolverFn<Maybe<ResolversTypes['User']>, ParentType, ContextType, RequireFields<QueryuserArgs, 'id'>>;
   users?: RequiredResolverFn<Array<ResolversTypes['User']>, ParentType, ContextType>;
@@ -421,6 +490,7 @@ export type UserRelationResolvers<ContextType = RedwoodGraphQLContext, ParentTyp
 export type Resolvers<ContextType = RedwoodGraphQLContext> = {
   BigInt: GraphQLScalarType;
   Contact: ContactResolvers<ContextType>;
+  Data: DataResolvers<ContextType>;
   Date: GraphQLScalarType;
   DateTime: GraphQLScalarType;
   JSON: GraphQLScalarType;

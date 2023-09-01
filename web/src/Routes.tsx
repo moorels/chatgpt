@@ -34,6 +34,10 @@ const Routes = () => {
             <Route path="/contacts/{id:Int}" page={ContactContactPage} name="contact" />
             <Route path="/contacts/new" page={ContactNewContactPage} name="newContact" />
             <Route path="/contacts" page={ContactContactsPage} name="contacts" />
+            <Route path="/datas/new" page={DataNewDataPage} name="newData" />
+            <Route path="/datas/{id:Int}/edit" page={DataEditDataPage} name="editData" />
+            <Route path="/datas/{id:Int}" page={DataDataPage} name="data" />
+            <Route path="/datas" page={DataDatasPage} name="datas" />
           </Private>
 
           <Route path="/explore" page={ExplorePage} name="explore" />
