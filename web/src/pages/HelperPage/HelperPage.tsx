@@ -109,7 +109,7 @@ const HelperPage = () => {
 
   return (
     <>
-      <body className="h-[1220px] bg-slate-700">
+      <div className="h-[1220px] bg-slate-700">
         <div>
           <MetaTags title="Helper" description="Helper page" />
 
@@ -148,7 +148,7 @@ const HelperPage = () => {
           <br />
           {decodedString454}
         </div>
-      </body>
+      </div>
     </>
   )
 }
