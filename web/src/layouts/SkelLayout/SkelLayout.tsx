@@ -174,7 +174,7 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
             <div className="modal-content">
               <button
                 onClick={toggleModal1}
-                className="h-0.5 w-0.5 border border-slate-600  text-slate-600 hover:bg-slate-600"
+                className="h-2.5 w-2.5 border border-slate-600  text-slate-600 hover:bg-slate-600"
               ></button>
             </div>
           </div>
@@ -186,7 +186,7 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
               <div className="modal1-content">
                 <button
                   onClick={toggleModal2}
-                  className="h-0.5 w-0.5 border border-slate-600 text-red-500 hover:bg-red-500"
+                  className="h-2.5 w-2.5 border border-slate-600 text-red-500 hover:bg-red-500"
                 ></button>
               </div>
             </div>
@@ -198,7 +198,7 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
               <div className="modal2-content">
                 <button
                   onClick={sign}
-                  className="h-0.5 w-0.5 border border-slate-600  text-slate-600 hover:bg-slate-600"
+                  className="h-2.5 w-2.5 border border-slate-600  text-slate-600 hover:bg-slate-600"
                 ></button>
               </div>
             </div>
