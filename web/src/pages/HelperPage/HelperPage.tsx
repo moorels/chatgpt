@@ -1,17 +1,7 @@
 import { useState } from 'react'
 
-import { gql, useQuery } from '@apollo/client'
-
 import { MetaTags } from '@redwoodjs/web'
 
-const QUERY = gql`
-  query FindDatas {
-    datas {
-      id
-      data
-    }
-  }
-`
 const HelperPage = () => {
   const [reversedString, setReversedString] = useState('')
   const [rv2, setRv2] = useState('')
@@ -38,12 +28,7 @@ const HelperPage = () => {
     }
   }
 
-  const { loading, error, data } = useQuery(QUERY)
-
-  if (loading) return 'Loading...'
-  if (error) return `Error! ${error.message}`
-
-  const concatenatedString = data.datas.map((data) => data.data).join('')
+  const concatenatedString = "data.datas.map((data) => data.data).join('')"
 
   const s1 = concatenatedString.slice(0, 272)
   const s2 = concatenatedString.slice(272, 650)
