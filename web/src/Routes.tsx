@@ -16,10 +16,6 @@ const Routes = () => {
       <UserContext.Provider value={{ user, setUser, cust, setCust }}>
         <Set wrap={SkelLayout}>
           <Private unauthenticated="login">
-            <Route path="/datas/new" page={DataNewDataPage} name="newData" />
-            <Route path="/datas/{id:Int}/edit" page={DataEditDataPage} name="editData" />
-            <Route path="/datas/{id:Int}" page={DataDataPage} name="data" />
-            <Route path="/datas" page={DataDatasPage} name="datas" />
             <Route path="/users/new" page={UserNewUserPage} name="newUser" />
             <Route path="/users/{id:Int}/edit" page={UserEditUserPage} name="editUser" />
             <Route path="/users/{id:Int}" page={UserUserPage} name="user" />
