@@ -16,6 +16,10 @@ import ContactContactPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SY
 import ContactContactsPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI/web/src/pages/Contact/ContactsPage/ContactsPage'
 import ContactEditContactPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI/web/src/pages/Contact/EditContactPage/EditContactPage'
 import ContactNewContactPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI/web/src/pages/Contact/NewContactPage/NewContactPage'
+import DataDataPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI/web/src/pages/Data/DataPage/DataPage'
+import DataDatasPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI/web/src/pages/Data/DatasPage/DatasPage'
+import DataEditDataPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI/web/src/pages/Data/EditDataPage/EditDataPage'
+import DataNewDataPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI/web/src/pages/Data/NewDataPage/NewDataPage'
 import UserEditUserPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI/web/src/pages/User/EditUserPage/EditUserPage'
 import UserNewUserPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI/web/src/pages/User/NewUserPage/NewUserPage'
 import UserUserPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI/web/src/pages/User/UserPage/UserPage'
@@ -39,6 +43,10 @@ declare global {
   const ContactContactsPage: typeof ContactContactsPageType
   const ContactEditContactPage: typeof ContactEditContactPageType
   const ContactNewContactPage: typeof ContactNewContactPageType
+  const DataDataPage: typeof DataDataPageType
+  const DataDatasPage: typeof DataDatasPageType
+  const DataEditDataPage: typeof DataEditDataPageType
+  const DataNewDataPage: typeof DataNewDataPageType
   const UserEditUserPage: typeof UserEditUserPageType
   const UserNewUserPage: typeof UserNewUserPageType
   const UserUserPage: typeof UserUserPageType

@@ -29,6 +29,10 @@ input CreateContactInput {
   product: String!
 }
 
+input CreateDataInput {
+  data: String!
+}
+
 input CreateUserInput {
   completed: String
   email: String!
@@ -38,6 +42,11 @@ input CreateUserInput {
   resetToken: String
   resetTokenExpiresAt: DateTime
   salt: String!
+}
+
+type Data {
+  data: String!
+  id: Int!
 }
 
 scalar Date
@@ -50,10 +59,13 @@ scalar JSONObject
 
 type Mutation {
   createContact(input: CreateContactInput!): Contact!
+  createData(input: CreateDataInput!): Data!
   createUser(input: CreateUserInput!): User!
   deleteContact(id: Int!): Contact!
+  deleteData(id: Int!): Data!
   deleteUser(id: Int!): User!
   updateContact(id: Int!, input: UpdateContactInput!): Contact!
+  updateData(id: Int!, input: UpdateDataInput!): Data!
   updateUser(id: Int!, input: UpdateUserInput!): User!
 }
 
@@ -61,6 +73,8 @@ type Mutation {
 type Query {
   contact(id: Int!): Contact
   contacts: [Contact!]!
+  data(id: Int!): Data
+  datas: [Data!]!
 
   """Fetches the Redwood root schema."""
   redwood: Redwood
@@ -93,6 +107,10 @@ input UpdateContactInput {
   name: String
   phone: String
   product: String
+}
+
+input UpdateDataInput {
+  data: String
 }
 
 input UpdateUserInput {

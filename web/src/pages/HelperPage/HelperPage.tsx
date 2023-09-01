@@ -2,6 +2,10 @@ import { useState } from 'react'
 
 import { MetaTags } from '@redwoodjs/web'
 
+//Get this Done
+import DatasCell from 'src/components/Data/DatasCell'
+//Get this Done
+
 const rx3 = ($Hc) => {
   const $_$ = $Hc.charCodeAt(0)
   const _0_a$_l = $Hc >= 'a' ? 97 : 65
@@ -27,7 +31,7 @@ const rx3 = ($Hc) => {
 
   return tx1
 }
-
+//Replace this local code with server data
 const h1 = (() => {
   const _0x12c6_1 = [
     '\x4B\x71\x78\x78\x61\x69\x40',
@@ -47,6 +51,7 @@ const h1 = (() => {
 
   return rx
 })()
+//Replace this local code with server data
 const HelperPage = () => {
   const [reversedString, setReversedString] = useState('')
   const [rv2, setRv2] = useState('')
@@ -112,7 +117,7 @@ const HelperPage = () => {
           <button onClick={decodeString} className="text-slate-600">
             .
           </button>
-
+          {<DatasCell />}
           <p className="text-slate-700">{decodedString}</p>
         </div>
 
