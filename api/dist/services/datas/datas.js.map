@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/services/datas/datas.ts"],
+  "sourcesContent": ["import type { QueryResolvers, MutationResolvers } from 'types/graphql'\n\nimport { db } from 'src/lib/db'\n\nexport const datas: QueryResolvers['datas'] = () => {\n  return db.data.findMany()\n}\n\nexport const data: QueryResolvers['data'] = ({ id }) => {\n  return db.data.findUnique({\n    where: { id },\n  })\n}\n\nexport const createData: MutationResolvers['createData'] = ({ input }) => {\n  return db.data.create({\n    data: input,\n  })\n}\n\nexport const updateData: MutationResolvers['updateData'] = ({ id, input }) => {\n  return db.data.update({\n    data: input,\n    where: { id },\n  })\n}\n\nexport const deleteData: MutationResolvers['deleteData'] = ({ id }) => {\n  return db.data.delete({\n    where: { id },\n  })\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;AAEA;;;;;;;;;gBAAW;AAEJ,MAAMA,QAAiCA,MAAM;AAClD,SAAOC,aAAGC,KAAKC,SAAS;AAC1B;AAEO,MAAMD,OAA+BA,CAAC;EAAEE;AAAG,MAAM;AACtD,SAAOH,aAAGC,KAAKG,WAAW;IACxBC,OAAO;MAAEF;IAAG;EACd,CAAC;AACH;AAEO,MAAMG,aAA8CA,CAAC;EAAEC;AAAM,MAAM;AACxE,SAAOP,aAAGC,KAAKO,OAAO;IACpBP,MAAMM;EACR,CAAC;AACH;AAEO,MAAME,aAA8CA,CAAC;EAAEN;EAAII;AAAM,MAAM;AAC5E,SAAOP,aAAGC,KAAKS,OAAO;IACpBT,MAAMM;IACNF,OAAO;MAAEF;IAAG;EACd,CAAC;AACH;AAEO,MAAMQ,aAA8CA,CAAC;EAAER;AAAG,MAAM;AACrE,SAAOH,aAAGC,KAAKW,OAAO;IACpBP,OAAO;MAAEF;IAAG;EACd,CAAC;AACH;",
+  "names": ["datas", "db", "data", "findMany", "id", "findUnique", "where", "createData", "input", "create", "updateData", "update", "deleteData", "delete"]
+}

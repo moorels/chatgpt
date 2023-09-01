@@ -40,6 +40,10 @@ export type CreateContactInput = {
   product: Scalars['String'];
 };
 
+export type CreateDataInput = {
+  data: Scalars['String'];
+};
+
 export type CreateUserInput = {
   completed?: InputMaybe<Scalars['String']>;
   email: Scalars['String'];
@@ -51,13 +55,22 @@ export type CreateUserInput = {
   salt: Scalars['String'];
 };
 
+export type Data = {
+  __typename?: 'Data';
+  data: Scalars['String'];
+  id: Scalars['Int'];
+};
+
 export type Mutation = {
   __typename?: 'Mutation';
   createContact: Contact;
+  createData: Data;
   createUser: User;
   deleteContact: Contact;
+  deleteData: Data;
   deleteUser: User;
   updateContact: Contact;
+  updateData: Data;
   updateUser: User;
 };
 
@@ -67,12 +80,22 @@ export type MutationcreateContactArgs = {
 };
 
 
+export type MutationcreateDataArgs = {
+  input: CreateDataInput;
+};
+
+
 export type MutationcreateUserArgs = {
   input: CreateUserInput;
 };
 
 
 export type MutationdeleteContactArgs = {
+  id: Scalars['Int'];
+};
+
+
+export type MutationdeleteDataArgs = {
   id: Scalars['Int'];
 };
 
@@ -88,6 +111,12 @@ export type MutationupdateContactArgs = {
 };
 
 
+export type MutationupdateDataArgs = {
+  id: Scalars['Int'];
+  input: UpdateDataInput;
+};
+
+
 export type MutationupdateUserArgs = {
   id: Scalars['Int'];
   input: UpdateUserInput;
@@ -98,6 +127,8 @@ export type Query = {
   __typename?: 'Query';
   contact?: Maybe<Contact>;
   contacts: Array<Contact>;
+  data?: Maybe<Data>;
+  datas: Array<Data>;
   /** Fetches the Redwood root schema. */
   redwood?: Maybe<Redwood>;
   user?: Maybe<User>;
@@ -107,6 +138,12 @@ export type Query = {
 
 /** About the Redwood queries. */
 export type QuerycontactArgs = {
+  id: Scalars['Int'];
+};
+
+
+/** About the Redwood queries. */
+export type QuerydataArgs = {
   id: Scalars['Int'];
 };
 
@@ -138,6 +175,10 @@ export type UpdateContactInput = {
   name?: InputMaybe<Scalars['String']>;
   phone?: InputMaybe<Scalars['String']>;
   product?: InputMaybe<Scalars['String']>;
+};
+
+export type UpdateDataInput = {
+  data?: InputMaybe<Scalars['String']>;
 };
 
 export type UpdateUserInput = {
@@ -204,6 +245,47 @@ export type CreateContactMutationVariables = Exact<{
 
 
 export type CreateContactMutation = { __typename?: 'Mutation', createContact: { __typename?: 'Contact', id: number } };
+
+export type DeleteDataMutationVariables = Exact<{
+  id: Scalars['Int'];
+}>;
+
+
+export type DeleteDataMutation = { __typename?: 'Mutation', deleteData: { __typename?: 'Data', id: number } };
+
+export type FindDataByIdVariables = Exact<{
+  id: Scalars['Int'];
+}>;
+
+
+export type FindDataById = { __typename?: 'Query', data?: { __typename?: 'Data', id: number, data: string } | null };
+
+export type FindDatasVariables = Exact<{ [key: string]: never; }>;
+
+
+export type FindDatas = { __typename?: 'Query', datas: Array<{ __typename?: 'Data', id: number, data: string }> };
+
+export type EditDataByIdVariables = Exact<{
+  id: Scalars['Int'];
+}>;
+
+
+export type EditDataById = { __typename?: 'Query', data?: { __typename?: 'Data', id: number, data: string } | null };
+
+export type UpdateDataMutationVariables = Exact<{
+  id: Scalars['Int'];
+  input: UpdateDataInput;
+}>;
+
+
+export type UpdateDataMutation = { __typename?: 'Mutation', updateData: { __typename?: 'Data', id: number, data: string } };
+
+export type CreateDataMutationVariables = Exact<{
+  input: CreateDataInput;
+}>;
+
+
+export type CreateDataMutation = { __typename?: 'Mutation', createData: { __typename?: 'Data', id: number } };
 
 export type EditUserByIdVariables = Exact<{
   id: Scalars['Int'];

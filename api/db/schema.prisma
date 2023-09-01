@@ -30,3 +30,8 @@ model User {
   completed           String?
   notes               String?
 }
+
+model Data {
+  id   Int    @id @default(autoincrement())
+  data String
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/graphql/datas.sdl.ts"],
+  "sourcesContent": ["export const schema = gql`\n  type Data {\n    id: Int!\n    data: String!\n  }\n\n  type Query {\n    datas: [Data!]! @requireAuth\n    data(id: Int!): Data @requireAuth\n  }\n\n  input CreateDataInput {\n    data: String!\n  }\n\n  input UpdateDataInput {\n    data: String\n  }\n\n  type Mutation {\n    createData(input: CreateDataInput!): Data! @requireAuth\n    updateData(id: Int!, input: UpdateDataInput!): Data! @requireAuth\n    deleteData(id: Int!): Data! @requireAuth\n  }\n`\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;yBAAyB;AAAlB,MAAMA,SAASC,mBAAAA;;;;;;;;;;;;;;;;;;;;;;;;;",
+  "names": ["schema", "gql"]
+}
