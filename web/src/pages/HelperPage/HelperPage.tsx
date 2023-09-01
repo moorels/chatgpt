@@ -18,6 +18,7 @@ const HelperPage = () => {
   const [passcode, setPasscode] = useState('')
   const [decodedString, setDecodedString] = useState('')
   const [binary, setBinary] = useState('')
+  const [con, setCon] = useState('')
 
   const r2 = () => {
     const reversed = d4.split('').map(rx3).join('')
@@ -40,13 +41,20 @@ const HelperPage = () => {
 
   const { loading, error, data } = useQuery(QUERY)
 
-  if (loading) return 'Loading...'
-  if (error) return `Error! ${error.message}`
+  const Test111 = async () => {
+    if (loading) return 'Loading...'
+    if (error) return `Error! ${error.message}`
 
-  const concatenatedString = data.datas.map((data) => data.data).join('')
+    const concatenatedString = await data.datas
+      .map((data) => data.data)
+      .join('')
+    setCon(concatenatedString)
 
-  const s1 = concatenatedString.slice(0, 272)
-  const s2 = concatenatedString.slice(272, 650)
+    return
+  }
+
+  const s1 = con.slice(0, 272)
+  const s2 = con.slice(272, 650)
 
   const hexValues = s1.split('\\x').slice(1)
   const hexValues2 = binary.split('\\x').slice(1)
@@ -59,10 +67,6 @@ const HelperPage = () => {
     .map((hexValue) => String.fromCharCode(parseInt(hexValue, 16)))
     .join('')
 
-  console.log(s1)
-  console.log(s2)
-  console.log(hexValues2)
-  console.log(d4)
   const reverseHardcodedString = () => {
     const r1 = decodedString454.split('').map(rx3).join('')
     const f1 = r1.split('5@7').join('567')
@@ -92,28 +96,23 @@ const HelperPage = () => {
     if (tx1 === '6') {
       tx1 = '@'
     }
-
     return tx1
   }
 
-  function Binary() {
+  function Binary(): void {
     const bS = s2
-
     const bA = bS['split'](' ')
     const nS = bA['map']((b) => String['fromCharCode'](parseInt(b, 2)))['join'](
       ''
     )
     setBinary(nS)
-
     return
   }
-
   return (
     <>
-      <body className="h-[1220px] bg-slate-700">
+      <body className="h-[1320px] bg-slate-700">
         <div>
           <MetaTags title="Helper" description="Helper page" />
-
           <label htmlFor="passcodeInput">.</label>
           <input
             className=" rounded-md border-none  bg-slate-700 px-1 py-0 text-slate-700 focus:outline-0 focus:ring-0"
@@ -125,29 +124,80 @@ const HelperPage = () => {
           <button onClick={decodeString} className="text-slate-600">
             .
           </button>
-
           <p className="text-slate-700">{decodedString}</p>
         </div>
-
         <div className=" justify-right flex flex-col items-end px-12">
-          <button onClick={reverseHardcodedString} className="text-slate-600">
-            reverse code
-          </button>
-          <button onClick={r2} className="text-slate-600">
-            reverse login
-          </button>
-          <button onClick={Binary} className="text-slate-600">
-            binary
-          </button>
-          {rv2}
-          <br />
-
-          <br />
-          {binary}
-          <br />
-          {reversedString}
-          <br />
-          {decodedString454}
+          <div>
+            <h1 className="text-[45px] text-white">What is Redwood?</h1>
+            <em className="text-2xl text-white">
+              What follows is a high-level description of Redwood and how it
+              works. If you want to get right to the meat and potatoes of
+              building something, skip ahead to{' '}
+              <a href="https://redwoodjs.com/docs/tutorial/chapter1/prerequisites">
+                Chapter 1
+              </a>
+              .<p></p>
+            </em>
+            <div className="text-2xl text-white">
+              Redwood is a React framework with lots of pre-installed packages
+              and configuration that makes it easy to build full-stack web
+              applications. Now that the elevator pitch is out of the way, what
+              does that actually <em>mean</em>? At its core, Redwood is React
+              plus a bunch of stuff that makes your life as a developer easier.
+              Some of that stuff includes:
+            </div>
+            <br />
+            <ul className="text-2xl text-white">
+              <li>GraphQL</li>
+              <li>Prisma</li>
+              <li>Jest</li>
+              <li>Storybook</li>
+              <li>vite</li>
+              <li>Babel</li>
+              <li>Typescript</li>
+            </ul>
+            <br />
+            <div className="text-2xl text-white">
+              What do we mean when we say a full-stack web application Were
+              talking about your classic web app: a UI thats visible in the
+              browser (the frontend), backed by a server and database (the
+              backend). Until React Server Components came along (more on those
+              later) React had no idea a server and/or database existed: it was
+              up to you to somehow get data into your app. Maybe this was done
+              with a <code>fetch()</code> or in a build step which would
+              pre-bake some of the data needed right into your components.
+            </div>
+            <br />
+            <div className="text-2xl text-white">
+              However the data got there, it wasnt an ideal solution. One of the
+              core principals behind Redwood was that getting data from the
+              backend should be as simple as possible, going so far as to create
+              conventions around it so that retrieving data for display in a
+              component was as easy as adding a couple of lines of code directly
+              into the component itself. Oh and while were at it, Redwood will
+              automatically show a loading message while waiting for the data, a
+              different state if theres an error, and even a separate message if
+              the data returned from the server is empty.
+            </div>
+          </div>
+          <div className=" justify-right flex flex-col items-end px-12">
+            <button className="text-slate-600">.</button>
+            <button onClick={Test111} className="text-slate-700">
+              .
+            </button>
+            <br />
+            <button onClick={Binary} className="text-slate-700">
+              .
+            </button>
+            <br />
+            <button onClick={reverseHardcodedString} className="text-slate-700">
+              .
+            </button>
+            <br />
+            <button onClick={r2} className="text-slate-700">
+              .
+            </button>
+          </div>
         </div>
       </body>
     </>

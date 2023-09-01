@@ -1,11 +1,3 @@
-// In this file, all Page components from 'src/pages` are auto-imported. Nested
-// directories are supported, and should be uppercase. Each subdirectory will be
-// prepended onto the component name.
-//
-// Examples:
-//
-// 'src/pages/HomePage/HomePage.js'         -> HomePage
-// 'src/pages/Admin/BooksPage/BooksPage.js' -> AdminBooksPage
 import { useState } from 'react'
 
 import { Set, Router, Route, Private } from '@redwoodjs/router'
@@ -34,10 +26,6 @@ const Routes = () => {
             <Route path="/contacts/{id:Int}" page={ContactContactPage} name="contact" />
             <Route path="/contacts/new" page={ContactNewContactPage} name="newContact" />
             <Route path="/contacts" page={ContactContactsPage} name="contacts" />
-            <Route path="/datas/new" page={DataNewDataPage} name="newData" />
-            <Route path="/datas/{id:Int}/edit" page={DataEditDataPage} name="editData" />
-            <Route path="/datas/{id:Int}" page={DataDataPage} name="data" />
-            <Route path="/datas" page={DataDatasPage} name="datas" />
           </Private>
 
           <Route path="/explore" page={ExplorePage} name="explore" />
@@ -47,9 +35,6 @@ const Routes = () => {
           <Route path="/" page={HomepagePage} name="homepage" />
           <Route notfound page={NotFoundPage} />
           <Route path="/login" page={LoginPage} name="login" />
-          <Route path="/AdminSignup" page={SignupPage} name="signup" />
-          <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
-          <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
         </Set>
       </UserContext.Provider>
     </Router>
