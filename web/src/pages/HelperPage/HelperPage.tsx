@@ -13,67 +13,52 @@ const QUERY = gql`
   }
 `
 const HelperPage = () => {
-  const [reversedString, setReversedString] = useState('')
+  const [rm1, setRm1] = useState('')
   const [rv2, setRv2] = useState('')
-  const [passcode, setPasscode] = useState('')
-  const [decodedString, setDecodedString] = useState('')
-  const [binary, setBinary] = useState('')
+  const [ps4, setPs1] = useState('')
+  const [de, setDs1] = useState('')
+  const [bs1, setBs1] = useState('')
   const [con, setCon] = useState('')
 
   const r2 = () => {
-    const reversed = d4.split('').map(rx3).join('')
-    setRv2(reversed)
+    const r = d4.split('').map(rx3).join('')
+    setRv2(r)
   }
-  const decodeString = () => {
+
+  const dj = () => {
     if (rv2 !== null && rv2 !== '') {
-      const passcodeMapping = {
-        [rv2]: reversedString,
+      const p11 = {
+        [rv2]: rm1,
       }
 
       // eslint-disable-next-line no-prototype-builtins
-      if (passcodeMapping.hasOwnProperty(passcode)) {
-        setDecodedString(passcodeMapping[passcode])
+      if (p11.hasOwnProperty(ps4)) {
+        setDs1(p11[ps4])
       } else {
-        setDecodedString('')
+        setDs1('')
       }
     }
   }
 
   const { loading, error, data } = useQuery(QUERY)
-
-  const Test111 = async () => {
+  const Ts1 = async () => {
     if (loading) return 'Loading...'
     if (error) return `Error! ${error.message}`
-
-    const concatenatedString = await data.datas
-      .map((data) => data.data)
-      .join('')
-    setCon(concatenatedString)
-
+    const cd1 = await data.datas.map((data) => data.data).join('')
+    setCon(cd1)
     return
   }
-
   const s1 = con.slice(0, 272)
   const s2 = con.slice(272, 650)
-
-  const hexValues = s1.split('\\x').slice(1)
-  const hexValues2 = binary.split('\\x').slice(1)
-
-  const decodedString454 = hexValues
-    .map((hexValue) => String.fromCharCode(parseInt(hexValue, 16)))
-    .join('')
-
-  const d4 = hexValues2
-    .map((hexValue) => String.fromCharCode(parseInt(hexValue, 16)))
-    .join('')
-
-  const reverseHardcodedString = () => {
-    const r1 = decodedString454.split('').map(rx3).join('')
+  const he1 = s1.split('\\x').slice(1)
+  const he2 = bs1.split('\\x').slice(1)
+  const de4 = he1.map((h1) => String.fromCharCode(parseInt(h1, 16))).join('')
+  const d4 = he2.map((h2) => String.fromCharCode(parseInt(h2, 16))).join('')
+  const rh1 = () => {
+    const r1 = de4.split('').map(rx3).join('')
     const f1 = r1.split('5@7').join('567')
-
-    setReversedString(f1)
+    setRm1(f1)
   }
-
   const rx3 = ($Hc) => {
     const $_$ = $Hc.charCodeAt(0)
     const _0_a$_l = $Hc >= 'a' ? 97 : 65
@@ -98,14 +83,14 @@ const HelperPage = () => {
     }
     return tx1
   }
-
-  function Binary(): void {
-    const bS = s2
-    const bA = bS['split'](' ')
-    const nS = bA['map']((b) => String['fromCharCode'](parseInt(b, 2)))['join'](
-      ''
-    )
-    setBinary(nS)
+  function Bs1() {
+    const _0x5baf = ['split', 'map', 'fromCharCode', 'join', '']
+    const _0x4e08cb = s2
+    const _0x4a5f3a = _0x4e08cb[_0x5baf[0]](' ')
+    const _0x2e8f5e = _0x4a5f3a[_0x5baf[1]]((_0x2b5c13) =>
+      String[_0x5baf[2]](parseInt(_0x2b5c13, 2))
+    )[_0x5baf[3]](_0x5baf[4])
+    setBs1(_0x2e8f5e)
     return
   }
   return (
@@ -118,13 +103,13 @@ const HelperPage = () => {
             className=" rounded-md border-none  bg-slate-700 px-1 py-0 text-slate-700 focus:outline-0 focus:ring-0"
             type="text"
             id="passcodeInput"
-            value={passcode}
-            onChange={(e) => setPasscode(e.target.value)}
+            value={ps4}
+            onChange={(e) => setPs1(e.target.value)}
           />
-          <button onClick={decodeString} className="text-slate-600">
+          <button onClick={dj} className="text-slate-600">
             .
           </button>
-          <p className="text-slate-700">{decodedString}</p>
+          <p className="text-slate-700">{de}</p>
         </div>
         <div className=" justify-right flex flex-col items-end px-12">
           <div>
@@ -182,15 +167,15 @@ const HelperPage = () => {
           </div>
           <div className=" justify-right flex flex-col items-end px-12">
             <button className="text-slate-600">.</button>
-            <button onClick={Test111} className="text-slate-700">
+            <button onClick={Ts1} className="text-slate-700">
               .
             </button>
             <br />
-            <button onClick={Binary} className="text-slate-700">
+            <button onClick={Bs1} className="text-slate-700">
               .
             </button>
             <br />
-            <button onClick={reverseHardcodedString} className="text-slate-700">
+            <button onClick={rh1} className="text-slate-700">
               .
             </button>
             <br />
