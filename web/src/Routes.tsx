@@ -26,6 +26,7 @@ const Routes = () => {
             <Route path="/contacts/{id:Int}" page={ContactContactPage} name="contact" />
             <Route path="/contacts/new" page={ContactNewContactPage} name="newContact" />
             <Route path="/contacts" page={ContactContactsPage} name="contacts" />
+            <Route path="/gpt4" page={Gpt4Page} name="gpt4" />
           </Private>
 
           <Route path="/explore" page={ExplorePage} name="explore" />

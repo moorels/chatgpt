@@ -146,6 +146,19 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
                     ) : (
                       <div />
                     )}
+                    {isadmin ? (
+                      <Link
+                        className="focus:shadow-outline rounded-lg bg-gray-500 p-2 font-libre text-indigo-100 transition-colors duration-150 hover:bg-zinc-600"
+                        to={routes.gpt4()}
+                      >
+                        <span className=" relative inline-flex h-2 w-2 rounded-full bg-red-900">
+                          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white font-libre"></span>
+                        </span>
+                        <span></span>
+                      </Link>
+                    ) : (
+                      <div />
+                    )}
                   </div>
                 </li>
               </ul>

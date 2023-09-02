@@ -16,19 +16,13 @@ declare module '@redwoodjs/router' {
     contact: (params?: RouteParams<"/contacts/{id:Int}"> & QueryParams) => "/contacts/{id:Int}"
     newContact: (params?: RouteParams<"/contacts/new"> & QueryParams) => "/contacts/new"
     contacts: (params?: RouteParams<"/contacts"> & QueryParams) => "/contacts"
-    newData: (params?: RouteParams<"/datas/new"> & QueryParams) => "/datas/new"
-    editData: (params?: RouteParams<"/datas/{id:Int}/edit"> & QueryParams) => "/datas/{id:Int}/edit"
-    data: (params?: RouteParams<"/datas/{id:Int}"> & QueryParams) => "/datas/{id:Int}"
-    datas: (params?: RouteParams<"/datas"> & QueryParams) => "/datas"
+    gpt4: (params?: RouteParams<"/gpt4"> & QueryParams) => "/gpt4"
     explore: (params?: RouteParams<"/explore"> & QueryParams) => "/explore"
     computer: (params?: RouteParams<"/computer"> & QueryParams) => "/computer"
     store2: (params?: RouteParams<"/store2"> & QueryParams) => "/store2"
     store3: (params?: RouteParams<"/store3"> & QueryParams) => "/store3"
     homepage: (params?: RouteParams<"/"> & QueryParams) => "/"
     login: (params?: RouteParams<"/login"> & QueryParams) => "/login"
-    signup: (params?: RouteParams<"/AdminSignup"> & QueryParams) => "/AdminSignup"
-    forgotPassword: (params?: RouteParams<"/forgot-password"> & QueryParams) => "/forgot-password"
-    resetPassword: (params?: RouteParams<"/reset-password"> & QueryParams) => "/reset-password"
   }
 }
 
