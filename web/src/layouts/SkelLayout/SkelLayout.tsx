@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useContext } from 'react'
 
 import { Link, navigate, routes } from '@redwoodjs/router'
@@ -20,15 +20,16 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
   const [showModal1, setShowModal1] = useState(false)
   const [showModal2, setShowModal2] = useState(false)
 
-  const toggleModal = () => {
+  const toggleModal = useCallback(() => {
     setShowModal(!showModal)
-  }
-  const toggleModal1 = () => {
+  }, [showModal])
+  const toggleModal1 = useCallback(() => {
     setShowModal1(!showModal1)
-  }
-  const toggleModal2 = () => {
+  }, [showModal1])
+  const toggleModal2 = useCallback(() => {
     setShowModal2(!showModal2)
-  }
+  }, [showModal2])
+
   const [isadmin, SetIsAdmin] = useState<boolean | null>(false)
 
   const sign = () => {

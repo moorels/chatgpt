@@ -13,6 +13,7 @@ const Routes = () => {
   const [cust, setCust] = useState('')
   return (
     <Router useAuth={useAuth}>
+      <Route path="/test1" page={Test1Page} name="test1" />
       <UserContext.Provider value={{ user, setUser, cust, setCust }}>
         <Set wrap={SkelLayout}>
           <Private unauthenticated="login">

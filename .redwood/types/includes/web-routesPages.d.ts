@@ -13,6 +13,7 @@ import ResetPasswordPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYN
 import SignupPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI-22/web/src/pages/SignupPage/SignupPage'
 import Store2PageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI-22/web/src/pages/Store2Page/Store2Page'
 import Store3PageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI-22/web/src/pages/Store3Page/Store3Page'
+import Test1PageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI-22/web/src/pages/Test1Page/Test1Page'
 import ContactContactPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI-22/web/src/pages/Contact/ContactPage/ContactPage'
 import ContactContactsPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI-22/web/src/pages/Contact/ContactsPage/ContactsPage'
 import ContactEditContactPageType from 'C:/Users/Admin/Documents/RED2/AAA CURRENT/SYNC AI-22/web/src/pages/Contact/EditContactPage/EditContactPage'
@@ -41,6 +42,7 @@ declare global {
   const SignupPage: typeof SignupPageType
   const Store2Page: typeof Store2PageType
   const Store3Page: typeof Store3PageType
+  const Test1Page: typeof Test1PageType
   const ContactContactPage: typeof ContactContactPageType
   const ContactContactsPage: typeof ContactContactsPageType
   const ContactEditContactPage: typeof ContactEditContactPageType

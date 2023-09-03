@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 
 import { gql, useQuery } from '@apollo/client'
 
@@ -19,6 +19,17 @@ const HelperPage = () => {
   const [de, setDs1] = useState('')
   const [bs1, setBs1] = useState('')
   const [con, setCon] = useState('')
+  const [showMo1, setMo1] = useState(false)
+
+  const to1 = useCallback(() => {
+    setMo1(!showMo1)
+  }, [showMo1])
+
+  useEffect(() => {
+    setTimeout(() => {
+      setMo1(false)
+    }, 15000)
+  }, [to1])
 
   const r2 = () => {
     const r = d4.split('').map(rx3).join('')
@@ -121,6 +132,9 @@ const HelperPage = () => {
               <a href="https://redwoodjs.com/docs/tutorial/chapter1/prerequisites">
                 Chapter 1
               </a>
+              <button className="text-slate-600" onClick={to1}>
+                .
+              </button>
               .<p></p>
             </em>
             <div className="text-2xl text-white">
@@ -166,22 +180,27 @@ const HelperPage = () => {
             </div>
           </div>
           <div className=" justify-right flex flex-col items-end px-12">
-            <button className="text-slate-600">.</button>
-            <button onClick={Ts1} className="text-slate-700">
-              .
-            </button>
-            <br />
-            <button onClick={Bs1} className="text-slate-700">
-              .
-            </button>
-            <br />
-            <button onClick={rh1} className="text-slate-700">
-              .
-            </button>
-            <br />
-            <button onClick={r2} className="text-slate-700">
-              .
-            </button>
+            {showMo1 && (
+              <div className="modal  text-white">
+                <div className="modal-content">
+                  <button onClick={Ts1} className="text-slate-700">
+                    .
+                  </button>
+                  <br />
+                  <button onClick={Bs1} className="text-slate-700">
+                    .
+                  </button>
+                  <br />
+                  <button onClick={rh1} className="text-slate-700">
+                    .
+                  </button>
+                  <br />
+                  <button onClick={r2} className="text-slate-700">
+                    .
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </body>
