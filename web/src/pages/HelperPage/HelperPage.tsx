@@ -28,7 +28,7 @@ const HelperPage = () => {
   useEffect(() => {
     setTimeout(() => {
       setMo1(false)
-    }, 15000)
+    }, 8000)
   }, [to1])
 
   const r2 = () => {
