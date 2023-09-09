@@ -294,101 +294,105 @@ const Test1Page = () => {
         <button className="items-end justify-end  text-slate-600" onClick={to1}>
           .
         </button>
-        <table className="rw-table">
-          <thead>
-            <tr>
-              <th>Id</th>
-              <th>Name</th>
-              <th>Company</th>
-              <th>Email</th>
-              <th>Phone</th>
-              <th>Product</th>
-              <th>Message</th>
+        <div className="rw-segment rw-table-wrapper-responsive w-[669]">
+          <table className="rw-table">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Company</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Product</th>
+                <th>Message</th>
 
-              <th>&nbsp;</th>
-            </tr>
-          </thead>
-          <tbody>
-            {rm1.map((rm1) => (
-              <tr key={rm1.id}>
-                <td>{rm1.id}</td>
-                <td>{shiftStringback(rm1.name, shiftValues[0])}</td>
-                <td>{shiftStringback(rm1.company, shiftValues[1])}</td>
-                <td>{shiftStringback(rm1.email, shiftValues[2])}</td>
-                <td>{shiftStringback(rm1.phone, shiftValues[3])}</td>
-                <td>{shiftStringback(rm1.product, shiftValues[4])}</td>
-                <td>{shiftStringback(rm1.message, shiftValues[5])}</td>
-
-                <td></td>
+                <th>&nbsp;</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-        <div className="flex flex-col items-center justify-center">
-          <h1 className="rw-label text-white">Name:</h1>
-          <div>
-            <input
-              type="text"
-              value={input}
-              onChange={handleChange}
-              className="rw-input w-[660px] border-x-2 border-y-2  border-orange-500 bg-slate-300 text-black"
-            />
-            {errorMessage && (
-              <div className="error-message text-white">{errorMessage}</div>
-            )}
-          </div>
-          <h1 className="rw-label text-white">Company:</h1>
-          <div>
-            <input
-              type="text"
-              value={input3}
-              onChange={handleChange2}
-              className="rw-input w-[660px] border-x-2 border-y-2  border-orange-500 bg-slate-300 text-black"
-            />
-          </div>
-          <h1 className="rw-label text-white">Email:</h1>
-          <div>
-            <input
-              type="text"
-              value={input4}
-              onChange={handleChange3}
-              className="rw-input w-[660px] border-x-2 border-y-2  border-orange-500 bg-slate-300 text-black"
-            />
-          </div>
-          <h1 className="rw-label text-white">Phone:</h1>
-          <div>
-            <input
-              type="text"
-              value={input5}
-              onChange={handleChange4}
-              className="rw-input w-[660px] border-x-2 border-y-2  border-orange-500 bg-slate-300 text-black"
-            />
-          </div>
-          <h1 className="rw-label text-white">Product:</h1>
-          <div>
-            <input
-              type="text"
-              value={input6}
-              onChange={handleChange5}
-              className="rw-input w-[660px] border-x-2 border-y-2  border-orange-500 bg-slate-300 text-black"
-            />
-          </div>
-          <h1 className="rw-label text-white">Message:</h1>
-          <div>
-            <input
-              type="text"
-              value={input7}
-              onChange={handleChange6}
-              className="rw-input w-[660px] border-x-2 border-y-2 border-orange-500 bg-slate-300 text-black "
-            />
-          </div>
-          <div className="h">
-            <button
-              className="rw-input w-[660px] animate-pulse border-x-2 border-y-2 bg-orange-500  font-bold text-white hover:bg-yellow-500"
-              onClick={onSave}
-            >
-              Save
-            </button>
+            </thead>
+            <tbody>
+              {rm1.map((rm1) => (
+                <tr key={rm1.id}>
+                  <td>{rm1.id}</td>
+                  <td>{shiftStringback(rm1.name, shiftValues[0])}</td>
+                  <td>{shiftStringback(rm1.company, shiftValues[1])}</td>
+                  <td>{shiftStringback(rm1.email, shiftValues[2])}</td>
+                  <td>{shiftStringback(rm1.phone, shiftValues[3])}</td>
+                  <td>{shiftStringback(rm1.product, shiftValues[4])}</td>
+                  <td>{shiftStringback(rm1.message, shiftValues[5])}</td>
+
+                  <td></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="rw-segment rw-table-wrapper-responsive w-[669] border-none">
+          <div className="flex flex-col items-center justify-center">
+            <h1 className="rw-label text-white">Name:</h1>
+            <div>
+              <input
+                type="text"
+                value={input}
+                onChange={handleChange}
+                className="rw-input w-[350px] border-x-2 border-y-2  border-orange-500 bg-slate-300 text-black"
+              />
+              {errorMessage && (
+                <div className="error-message text-white">{errorMessage}</div>
+              )}
+            </div>
+            <h1 className="rw-label text-white">Company:</h1>
+            <div>
+              <input
+                type="text"
+                value={input3}
+                onChange={handleChange2}
+                className="rw-input w-[350px] border-x-2 border-y-2  border-orange-500 bg-slate-300 text-black"
+              />
+            </div>
+            <h1 className="rw-label text-white">Email:</h1>
+            <div>
+              <input
+                type="text"
+                value={input4}
+                onChange={handleChange3}
+                className="rw-input w-[350px] border-x-2 border-y-2  border-orange-500 bg-slate-300 text-black"
+              />
+            </div>
+            <h1 className="rw-label text-white">Phone:</h1>
+            <div>
+              <input
+                type="text"
+                value={input5}
+                onChange={handleChange4}
+                className="rw-input w-[350px] border-x-2 border-y-2  border-orange-500 bg-slate-300 text-black"
+              />
+            </div>
+            <h1 className="rw-label text-white">Product:</h1>
+            <div>
+              <input
+                type="text"
+                value={input6}
+                onChange={handleChange5}
+                className="rw-input w-[350px] border-x-2 border-y-2  border-orange-500 bg-slate-300 text-black"
+              />
+            </div>
+            <h1 className="rw-label text-white">Message:</h1>
+            <div>
+              <input
+                type="text"
+                value={input7}
+                onChange={handleChange6}
+                className="rw-input w-[350px] border-x-2 border-y-2 border-orange-500 bg-slate-300 text-black "
+              />
+            </div>
+            <div className="h">
+              <button
+                className="rw-input w-[250px] animate-pulse border-x-2 border-y-2 bg-orange-500  font-bold text-white hover:bg-yellow-500"
+                onClick={onSave}
+              >
+                Save
+              </button>
+            </div>
           </div>
         </div>
         <p className=" justify-end  px-12 py-12"></p>

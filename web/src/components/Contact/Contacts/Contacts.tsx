@@ -75,21 +75,6 @@ const ContactsList = ({ contacts }: FindContacts) => {
                   >
                     Show
                   </Link>
-                  <Link
-                    to={routes.editContact({ id: contact.id })}
-                    title={'Edit contact ' + contact.id}
-                    className="rw-button rw-button-small rw-button-blue"
-                  >
-                    Edit
-                  </Link>
-                  <button
-                    type="button"
-                    title={'Delete contact ' + contact.id}
-                    className="rw-button rw-button-small rw-button-red"
-                    onClick={() => onDeleteClick(contact.id)}
-                  >
-                    Delete
-                  </button>
                 </nav>
               </td>
             </tr>
