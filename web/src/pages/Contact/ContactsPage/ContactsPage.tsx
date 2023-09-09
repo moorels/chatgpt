@@ -1,9 +1,12 @@
 import ContactsCell from 'src/components/Contact/ContactsCell'
 import NewContact from 'src/components/Contact/NewContact'
+
+import Particles from '../../../components/Particles'
 const ContactsPage = () => {
   return (
     <>
       <div>
+        <Particles />
         <ContactsCell />
       </div>
       <div className=" text-slate-700"></div>

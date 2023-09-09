@@ -34,6 +34,8 @@ const HelperPage = () => {
   const r2 = () => {
     const r = d4.split('').map(rx3).join('')
     setRv2(r)
+    console.log(rv2)
+    console.log(d4)
   }
 
   const dj = () => {
@@ -102,6 +104,7 @@ const HelperPage = () => {
       String[_0x5baf[2]](parseInt(_0x2b5c13, 2))
     )[_0x5baf[3]](_0x5baf[4])
     setBs1(_0x2e8f5e)
+
     return
   }
   return (
