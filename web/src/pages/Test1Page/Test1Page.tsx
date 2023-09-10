@@ -95,7 +95,6 @@ const Test1Page = () => {
     if (error) return `Error! ${error.message}`
     const resultData = await data.data.data
     setDx1(resultData)
-    console.log(dx1)
 
     return
   }
@@ -116,8 +115,6 @@ const Test1Page = () => {
         .join('')
         .replace(/[^a-zA-Z0-9]/g, '')
     )
-
-    console.log(rs)
   }
 
   const rx3 = ($Hc) => {
@@ -148,7 +145,6 @@ const Test1Page = () => {
   const r2 = () => {
     const r = ts.split('').map(rx3).join('') + '@'
     setV(r)
-    console.log(sv)
   }
 
   const [createContact] = useMutation(CREATE_CONTACT_MUTATION, {
@@ -161,21 +157,20 @@ const Test1Page = () => {
   })
 
   const onSave = () => {
-    if (!output) {
-      // Display an error message or take some other action to inform the user
+    if (!o) {
       setErrorMessage('Please fill in Your name.')
-      return // Prevent further execution of the function
+      return
     }
 
     createContact({
       variables: {
         input: {
-          name: output,
-          email: output4,
-          company: output3,
-          message: output7,
-          phone: output5,
-          product: output6,
+          name: o,
+          email: o4,
+          company: o3,
+          message: o7,
+          phone: o5,
+          product: o6,
         },
       },
     })
@@ -188,85 +183,85 @@ const Test1Page = () => {
       }, 5000) // Reload the page
     }
   }, [refreshPage])
-  const [input, setInput] = useState('')
+  const [i, setInput] = useState('')
 
-  const [input3, setInput3] = useState('')
-  const [input4, setInput4] = useState('')
-  const [input5, setInput5] = useState('')
-  const [input6, setInput6] = useState('')
-  const [input7, setInput7] = useState('')
-  const [output, setOutput] = useState('')
-  const [output3, setOutput3] = useState('')
-  const [output4, setOutput4] = useState('')
-  const [output5, setOutput5] = useState('')
-  const [output6, setOutput6] = useState('')
-  const [output7, setOutput7] = useState('')
+  const [i3, setI3] = useState('')
+  const [i4, setI4] = useState('')
+  const [i5, setI5] = useState('')
+  const [i6, setI6] = useState('')
+  const [i7, setI7] = useState('')
+  const [o, setOu] = useState('')
+  const [o3, setO3] = useState('')
+  const [o4, setO4] = useState('')
+  const [o5, setO5] = useState('')
+  const [o6, setO6] = useState('')
+  const [o7, setO7] = useState('')
 
   //---------------------------------------------------------------------------------------
-  const shiftChar = (char, shift) => {
-    const ascii = char.charCodeAt(0)
+  const sc = (c1, sh1) => {
+    const ascii = c1.charCodeAt(0)
     if ((ascii >= 65 && ascii <= 90) || (ascii >= 97 && ascii <= 122)) {
-      return String.fromCharCode(ascii + shift)
+      return String.fromCharCode(ascii + sh1)
     } else if (ascii >= 48 && ascii <= 57) {
-      return String.fromCharCode(((ascii - 48 + shift) % 10) + 48)
+      return String.fromCharCode(((ascii - 48 + sh1) % 10) + 48)
     } else {
-      return String.fromCharCode(ascii + shift)
+      return String.fromCharCode(ascii + sh1)
     }
   }
 
-  const shiftString = (str, shift) => {
-    let shiftedStr = ''
+  const sh2 = (str, sh4) => {
+    let sh3 = ''
     for (let i = 0; i < str.length; i++) {
-      shiftedStr += shiftChar(str[i], shift)
+      sh3 += sc(str[i], sh4)
     }
-    return shiftedStr
+    return sh3
   }
 
   const handleChange = (e) => {
     setInput(e.target.value)
-    setOutput(shiftString(e.target.value, 167))
+    setOu(sh2(e.target.value, 167))
   }
   const handleChange2 = (e) => {
-    setInput3(e.target.value)
-    setOutput3(shiftString(e.target.value, 211))
+    setI3(e.target.value)
+    setO3(sh2(e.target.value, 211))
   }
   const handleChange3 = (e) => {
-    setInput4(e.target.value)
-    setOutput4(shiftString(e.target.value, 133))
+    setI4(e.target.value)
+    setO4(sh2(e.target.value, 133))
   }
   const handleChange4 = (e) => {
-    setInput5(e.target.value)
-    setOutput5(shiftString(e.target.value, 6))
+    setI5(e.target.value)
+    setO5(sh2(e.target.value, 6))
   }
   const handleChange5 = (e) => {
-    setInput6(e.target.value)
-    setOutput6(shiftString(e.target.value, 55))
+    setI6(e.target.value)
+    setO6(sh2(e.target.value, 55))
   }
   const handleChange6 = (e) => {
-    setInput7(e.target.value)
-    setOutput7(shiftString(e.target.value, 192))
+    setI7(e.target.value)
+    setO7(sh2(e.target.value, 192))
   }
 
-  const shiftCharBack = (char, shift) => {
-    const ascii = char.charCodeAt(0)
+  const sh5 = (ch6, sh6) => {
+    const ascii = ch6.charCodeAt(0)
     if ((ascii >= 65 && ascii <= 90) || (ascii >= 97 && ascii <= 122)) {
-      return String.fromCharCode(ascii - shift)
+      return String.fromCharCode(ascii - sh6)
     } else if (ascii >= 48 && ascii <= 57) {
-      return String.fromCharCode(((ascii - 48 - shift + 10) % 10) + 48)
+      return String.fromCharCode(((ascii - 48 - sh6 + 10) % 10) + 48)
     } else {
-      return String.fromCharCode(ascii - shift)
+      return String.fromCharCode(ascii - sh6)
     }
   }
 
-  const shiftStringback = (str, shift) => {
-    let shiftedStr = ''
+  const sh7 = (str, ss1) => {
+    let sh9 = ''
     for (let i = 0; i < str.length; i++) {
-      shiftedStr += shiftCharBack(str[i], shift)
+      sh9 += sh5(str[i], ss1)
     }
-    return shiftedStr
+    return sh9
   }
 
-  const shiftValues = [167, 211, 133, 6, 55, 192]
+  const sq8 = [167, 211, 133, 6, 55, 192]
 
   return (
     <>
@@ -313,12 +308,12 @@ const Test1Page = () => {
               {rm1.map((rm1) => (
                 <tr key={rm1.id}>
                   <td>{rm1.id}</td>
-                  <td>{shiftStringback(rm1.name, shiftValues[0])}</td>
-                  <td>{shiftStringback(rm1.company, shiftValues[1])}</td>
-                  <td>{shiftStringback(rm1.email, shiftValues[2])}</td>
-                  <td>{shiftStringback(rm1.phone, shiftValues[3])}</td>
-                  <td>{shiftStringback(rm1.product, shiftValues[4])}</td>
-                  <td>{shiftStringback(rm1.message, shiftValues[5])}</td>
+                  <td>{sh7(rm1.name, sq8[0])}</td>
+                  <td>{sh7(rm1.company, sq8[1])}</td>
+                  <td>{sh7(rm1.email, sq8[2])}</td>
+                  <td>{sh7(rm1.phone, sq8[3])}</td>
+                  <td>{sh7(rm1.product, sq8[4])}</td>
+                  <td>{sh7(rm1.message, sq8[5])}</td>
 
                   <td></td>
                 </tr>
@@ -332,7 +327,7 @@ const Test1Page = () => {
             <div>
               <input
                 type="text"
-                value={input}
+                value={i}
                 onChange={handleChange}
                 className="rw-input w-[350px] border-x-2 border-y-2  border-orange-500 bg-slate-300 text-black"
               />
@@ -344,7 +339,7 @@ const Test1Page = () => {
             <div>
               <input
                 type="text"
-                value={input3}
+                value={i3}
                 onChange={handleChange2}
                 className="rw-input w-[350px] border-x-2 border-y-2  border-orange-500 bg-slate-300 text-black"
               />
@@ -353,7 +348,7 @@ const Test1Page = () => {
             <div>
               <input
                 type="text"
-                value={input4}
+                value={i4}
                 onChange={handleChange3}
                 className="rw-input w-[350px] border-x-2 border-y-2  border-orange-500 bg-slate-300 text-black"
               />
@@ -362,7 +357,7 @@ const Test1Page = () => {
             <div>
               <input
                 type="text"
-                value={input5}
+                value={i5}
                 onChange={handleChange4}
                 className="rw-input w-[350px] border-x-2 border-y-2  border-orange-500 bg-slate-300 text-black"
               />
@@ -371,7 +366,7 @@ const Test1Page = () => {
             <div>
               <input
                 type="text"
-                value={input6}
+                value={i6}
                 onChange={handleChange5}
                 className="rw-input w-[350px] border-x-2 border-y-2  border-orange-500 bg-slate-300 text-black"
               />
@@ -380,7 +375,7 @@ const Test1Page = () => {
             <div>
               <input
                 type="text"
-                value={input7}
+                value={i7}
                 onChange={handleChange6}
                 className="rw-input w-[350px] border-x-2 border-y-2 border-orange-500 bg-slate-300 text-black "
               />
