@@ -194,7 +194,8 @@ const HomepagePage = () => {
               </p>
               <span className="mt-4 inline-flex flex-col items-center justify-center text-white sm:ml-auto sm:mt-0 sm:justify-start">
                 <p className=" leading-normal">Phone: 0468 609 702</p>
-                <p className=" leading-normal">Email: Sales@syncai.com.au</p>
+                <p className=" leading-normal">Email: sales@aitoolagents.com.au</p>
+                <p className=" leading-normal">Email: sales@syncai.com.au</p>
                 <p className=" leading-normal">
                   21 Brindalee Mews Chadstone 3184
                 </p>
