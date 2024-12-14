@@ -36,7 +36,7 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
   }
 
   let { user } = useContext<undefined | any>(UserContext)
-  let welcome = ` Welcome: ${user}`
+  let welcome = `: ${user}`
 
   const finaluser = welcome
 
