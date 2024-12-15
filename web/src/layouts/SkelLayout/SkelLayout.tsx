@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useContext } from 'react'
 
 import { Link, navigate, routes } from '@redwoodjs/router'
@@ -20,15 +20,16 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
   const [showModal1, setShowModal1] = useState(false)
   const [showModal2, setShowModal2] = useState(false)
 
-  const toggleModal = () => {
+  const toggleModal = useCallback(() => {
     setShowModal(!showModal)
-  }
-  const toggleModal1 = () => {
+  }, [showModal])
+  const toggleModal1 = useCallback(() => {
     setShowModal1(!showModal1)
-  }
-  const toggleModal2 = () => {
+  }, [showModal1])
+  const toggleModal2 = useCallback(() => {
     setShowModal2(!showModal2)
-  }
+  }, [showModal2])
+
   const [isadmin, SetIsAdmin] = useState<boolean | null>(false)
 
   const sign = () => {
@@ -46,9 +47,27 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
     }
   }, [finaluser, user])
 
+  useEffect(() => {
+    setTimeout(() => {
+      setShowModal(false)
+    }, 8000)
+  }, [toggleModal])
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowModal1(false)
+    }, 12000)
+  }, [toggleModal1])
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowModal2(false)
+    }, 12000)
+  }, [toggleModal2])
+
   const { isAuthenticated } = useAuth()
   const logmeout = useAuth()
-  console.log('test')
+
   return (
     <>
       <MetaTags
@@ -120,10 +139,36 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
                         className="focus:shadow-outline rounded-lg bg-gray-500 p-2 font-libre text-indigo-100 transition-colors duration-150 hover:bg-zinc-600"
                         to={routes.contacts()}
                       >
-                        <span className=" relative inline-flex h-2 w-2 rounded-full bg-gray-100">
-                          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gray-100 font-libre opacity-75"></span>
+                        <span className=" relative inline-flex h-2 w-2 rounded-full bg-orange-900">
+                          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white font-libre"></span>
                         </span>
-                        <span> Contacts</span>
+                        <span></span>
+                      </Link>
+                    ) : (
+                      <div />
+                    )}
+                    {isadmin ? (
+                      <Link
+                        className="focus:shadow-outline rounded-lg bg-gray-500 p-2 font-libre text-indigo-100 transition-colors duration-150 hover:bg-zinc-600"
+                        to={routes.gpt4()}
+                      >
+                        <span className=" relative inline-flex h-2 w-2 rounded-full bg-red-900">
+                          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white font-libre"></span>
+                        </span>
+                        <span></span>
+                      </Link>
+                    ) : (
+                      <div />
+                    )}
+                    {isadmin ? (
+                      <Link
+                        className="focus:shadow-outline rounded-lg bg-gray-500 p-2 font-libre text-indigo-100 transition-colors duration-150 hover:bg-zinc-600"
+                        to={routes.specialagentdata()}
+                      >
+                        <span className=" relative inline-flex h-2 w-2 rounded-full bg-green-900">
+                          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white font-libre"></span>
+                        </span>
+                        <span></span>
                       </Link>
                     ) : (
                       <div />
@@ -147,8 +192,12 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
           </div>
           <div className=" focus:shadow-outline m-2 w-60 justify-center rounded-lg p-0 text-center align-middle text-2xl text-slate-100"></div>
         </header>
+      </div>
+
+      {children}
+      <div className="py-12">
         {showModal && (
-          <div className="modal float-right px-12 text-white">
+          <div className="modal float-right px-24 text-white">
             <div className="modal-content">
               <button
                 onClick={toggleModal1}
@@ -157,31 +206,31 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
             </div>
           </div>
         )}
-      </div>
-      <div className="flex h-full w-full flex-col items-center justify-center ">
-        {showModal2 && (
-          <div className="modal2 text-white">
-            <div className="modal2-content">
-              <button
-                onClick={sign}
-                className="h-0.5 w-0.5 border border-slate-600  text-slate-600 hover:bg-slate-600"
-              ></button>
+
+        <div className="px-4">
+          {showModal1 && (
+            <div className="modal1 text-white">
+              <div className="modal1-content">
+                <button
+                  onClick={toggleModal2}
+                  className="h-0.5 w-0.5 border border-slate-600 text-red-500 hover:bg-red-500"
+                ></button>
+              </div>
             </div>
-          </div>
-        )}
-      </div>
-      {children}
-      <div className=" mb-4 px-4">
-        {showModal1 && (
-          <div className="modal1 text-white">
-            <div className="modal1-content">
-              <button
-                onClick={toggleModal2}
-                className="h-0.5 w-0.5 border border-slate-600 text-red-500 hover:bg-red-500"
-              ></button>
+          )}
+        </div>
+        <div className="flex h-full w-full flex-col items-center justify-center ">
+          {showModal2 && (
+            <div className="modal2 text-white">
+              <div className="modal2-content">
+                <button
+                  onClick={sign}
+                  className="h-0.5 w-0.5 border border-slate-600  text-slate-600 hover:bg-slate-600"
+                ></button>
+              </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </>
   )
