@@ -154,7 +154,7 @@ const SkelLayout = ({ children }: SkelLayoutProps) => {
             <div className=" bg-white-500   place-content-center p-2 text-white"></div>
 
             <div className={styles.typewriter}>
-              <h1 className=" text-sm text-zinc-100 ">Welcome to Sync AI</h1>
+              <h1 className=" text-sm text-zinc-100 ">AI Business Agents</h1>
             </div>
             <div className="items-left px-32 ">
               <button
